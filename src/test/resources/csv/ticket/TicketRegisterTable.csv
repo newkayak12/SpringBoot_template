@@ -1,0 +1,5 @@
+name,type,watchableSimultaneously,maximumResolution,isSupportHDR,savableCount,price,isActive
+"BASIC","BASIC",1,HD,false,10,9900,true
+"ADVERTISE_STANDARD","ADVERTISE_STANDARD",1,HD,false,10,4500,true
+"STANDARD","STANDARD",4,FHD,false,100,11000,true
+"PREMIUM","PREMIUM",4,UHD,true,999,13000,true

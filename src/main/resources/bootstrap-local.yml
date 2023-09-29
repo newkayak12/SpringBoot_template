@@ -1,0 +1,9 @@
+spring:
+
+#    profiles:
+#      - local
+#      - rabbit
+  application:
+    name: netflix_clone_user_service
+  config:
+    import: configserver:http://newkayak.iptime.org:8888

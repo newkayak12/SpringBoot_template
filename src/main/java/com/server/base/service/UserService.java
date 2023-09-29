@@ -1,66 +1,67 @@
 package com.server.base.service;
 
-import com.server.base.common.authorizations.TokenManager;
-import com.server.base.common.exception.Exceptions;
-import com.server.base.common.exception.ServiceException;
-import com.server.base.common.mapper.Mapper;
-import com.server.base.repository.dto.UserDto;
-import com.server.base.repository.userRepository.User;
+import com.server.base.components.constants.Constants;
+import com.server.base.components.exceptions.BecauseOf;
+import com.server.base.components.exceptions.CommonException;
+import com.server.base.repository.domains.Account;
+import com.server.base.repository.dto.reference.AccountDto;
+import com.server.base.repository.dto.request.SignInRequest;
+import com.server.base.repository.dto.request.SignUpRequest;
 import com.server.base.repository.userRepository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.modelmapper.ModelMapper;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tokenManager.TokenControl;
 
+import javax.servlet.http.HttpServletResponse;
+import java.time.LocalDate;
+import java.util.Objects;
+import java.util.Optional;
 
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@Transactional(rollbackFor = Exception.class)
 public class UserService {
-    private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+    private final UserRepository repository;
+    private final ModelMapper mapper;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final TokenControl tokenControl;
 
-    /**
-     * Refresh 토큰 가져오기
-     * @param userNo
-     * @return
-     */
-    @Transactional(readOnly = true)
-    public UserDto getRefreshToken(Long userNo){
-        return Mapper.modelMapping(userRepository.getUserByUserNo(userNo), new UserDto());
+
+
+    private Boolean isPasswordMatched(String rawPassword, String encryptedPassword) {
+        return bCryptPasswordEncoder.matches(rawPassword, encryptedPassword);
     }
 
-    /**
-     * 사용자 가져오기
-     * @param userDto
-     * @return
-     * @throws ServiceException
-     */
-    @Transactional(readOnly = true)
-    public UserDto getUser(UserDto userDto) throws ServiceException{
-        User user = userRepository.getUserByUserId(userDto.getId())
-                .orElseThrow(() ->  new ServiceException(Exceptions.NO_DATA));
-        String password = userDto.getPassword();
-        String rawPassword = user.getPassword();
-        if(!passwordEncoder.matches(password, rawPassword)){
-            throw  new ServiceException(Exceptions.NO_DATA);
-        }
-        return Mapper.modelMapping(user, new UserDto());
+    private void encryptPassword(AccountDto accountDto){
+        accountDto.setUserPwd(bCryptPasswordEncoder.encode(accountDto.getUserPwd()));
     }
 
-    /**
-     * 사용자 등록
-     * @param userDto
-     * @return
-     */
-    @Transactional(rollbackFor = Exception.class)
-    public UserDto saveUser(UserDto userDto) {
-        userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        User user = Mapper.modelMapping(userDto, new User());
-        user = userRepository.save(user);
-        user.setRefreshToken(TokenManager.refreshEncrypt(user.getUserNo()));
-        userDto = Mapper.modelMapping(user, userDto);
-        return userDto;
+    public AccountDto signIn(SignInRequest signInRequest, HttpServletResponse response) throws CommonException {
+        AccountDto dto = repository.signIn(signInRequest).orElseThrow(() -> new CommonException(BecauseOf.ACCOUNT_NOT_EXIST));
+        if(!this.isPasswordMatched(signInRequest.getUserPwd(), dto.getUserPwd())) throw new CommonException(BecauseOf.PASSWORD_NOT_MATCHED);
+
+        return dto;
     }
+
+
+    public AccountDto signUp(SignUpRequest signUpRequest, HttpServletResponse response) throws CommonException {
+        if(Objects.nonNull(signUpRequest.getUserNo())) throw new CommonException(BecauseOf.ALREADY_EXIST_ACCOUNT);
+
+
+        AccountDto dto =  signUpRequest;
+        encryptPassword(dto);
+
+        Account account = mapper.map(dto, Account.class);
+        account = repository.save(account);
+        dto = mapper.map(account, AccountDto.class);
+
+        response.addHeader(Constants.TOKEN_NAME, tokenControl.encrypt(dto));
+        return dto;
+    }
+
 }

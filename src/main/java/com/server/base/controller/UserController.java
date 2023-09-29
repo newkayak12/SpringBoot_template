@@ -1,47 +1,42 @@
 package com.server.base.controller;
 
-import com.server.base.common.constants.Constants;
-import com.server.base.common.exception.ServiceException;
-import com.server.base.common.responseContainer.EncryptResponse;
-import com.server.base.common.responseContainer.Response;
-import com.server.base.repository.dto.UserDto;
+import com.server.base.components.exceptions.CommonException;
+import com.server.base.repository.dto.reference.AccountDto;
+import com.server.base.repository.dto.request.SignInRequest;
+import com.server.base.repository.dto.request.SignUpRequest;
 import com.server.base.service.UserService;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.tags.Tag;
+import com.server.base.components.validations.AccountValid;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
-
-@Tag(name = "/api/user", description = "회원")
+/**
+ * Created on 2023-05-12
+ * Project user-service
+ */
 @RestController
-@CrossOrigin("*")
-@RequestMapping(value = "/api/user")
-@Slf4j
+@RequestMapping(value = "/api/v1/user")
 @RequiredArgsConstructor
 public class UserController {
-    private final UserService userService;
+    private final UserService service;
 
-    @ApiOperation(value = "로그인", httpMethod = "GET")
-    @GetMapping(value = "/signIn")
-    public Response signIn(@ModelAttribute UserDto userDto,
-                           HttpServletResponse response) throws ServiceException {
-        UserDto result = userService.getUser(userDto);
-        response.addHeader(Constants.REFRESH_TOKEN, result.getAuthEntity().getRefreshToken());
-        return new EncryptResponse( response, result,null);
-    };
 
-    @ApiOperation("회원가입")
-    @PostMapping("/signUp")
-    public Response signOut(@RequestBody UserDto userDto, HttpServletResponse response) throws ServiceException{
-        log.error("WORK!");
-        UserDto result = userService.saveUser(userDto);
-        response.addHeader(Constants.REFRESH_TOKEN, result.getAuthEntity().getRefreshToken());
-        return new EncryptResponse(response, result, null);
 
+    @GetMapping(value = "/sign/in")
+    public ResponseEntity<AccountDto> signIn(@ModelAttribute @Valid @Validated(value = {AccountValid.SignIn.class})
+                                             SignInRequest signInRequest, HttpServletResponse response) throws CommonException {
+        return new ResponseEntity<>(service.signIn(signInRequest, response), HttpStatus.OK);
     }
 
-
+    @PostMapping(value = "/sign/up")
+    public ResponseEntity<AccountDto> signUp(@RequestBody @Valid @Validated(value = {AccountValid.SignUp.class})
+                                             SignUpRequest signUpRequest,
+                                             HttpServletResponse response) throws CommonException {
+        return new ResponseEntity<>(service.signUp(signUpRequest, response), HttpStatus.OK);
+    }
 }
