@@ -14,7 +14,5 @@ public interface UserRepository extends JpaRepository<Account, Long>, UserReposi
 
     Optional<Long> countAccountByUserId(String userId);
     Optional<Account> findAccountByUserId(String userId);
-    Optional<Account> findAccountByEmailAndMobileNo( String email, String mobileNo );
 
-    Optional<Account> findAccountByUserIdAndEmailAndMobileNo (String userId, String email, String mobileNo);
 }

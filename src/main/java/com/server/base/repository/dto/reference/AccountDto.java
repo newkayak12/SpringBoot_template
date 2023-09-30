@@ -1,6 +1,7 @@
 package com.server.base.repository.dto.reference;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.server.base.components.validations.AccountValid;
 import com.server.base.components.validations.ProfileValid;
 import com.server.base.components.validations.TicketValid;
@@ -31,6 +32,8 @@ public class AccountDto implements Serializable {
 
     @NotEmpty(message = "아이디를 입력하세요.", groups = {AccountValid.SignUp.class, AccountValid.SignIn.class, AccountValid.FindPwd.class})
     private String userId;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotEmpty(message = "비밀번호를 입력하세요.", groups = {
                                                         AccountValid.SignUp.class,
                                                         AccountValid.SignIn.class,

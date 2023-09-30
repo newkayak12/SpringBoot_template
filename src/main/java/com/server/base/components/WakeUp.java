@@ -20,11 +20,6 @@ public class WakeUp {
     @EventListener(value = {ApplicationReadyEvent.class})
     public void message(){
 
-        log.warn("{} is ready", repository.wakeUpMsg("\n" +
-                "  _   _                                        _          \n" +
-                " | | | |___  ___ _ __      ___  ___ _ ____   _(_) ___ ___ \n" +
-                " | | | / __|/ _ \\ '__|____/ __|/ _ \\ '__\\ \\ / / |/ __/ _ \\\n" +
-                " | |_| \\__ \\  __/ | |_____\\__ \\  __/ |   \\ V /| | (_|  __/\n" +
-                "  \\___/|___/\\___|_|       |___/\\___|_|    \\_/ |_|\\___\\___|"));
+        log.warn("{} is ready", repository.wakeUpMsg("bases"));
     }
 }

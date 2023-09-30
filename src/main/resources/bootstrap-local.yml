@@ -4,6 +4,6 @@ spring:
 #      - local
 #      - rabbit
   application:
-    name: netflix_clone_user_service
+    name: base
   config:
     import: configserver:http://newkayak.iptime.org:8888
