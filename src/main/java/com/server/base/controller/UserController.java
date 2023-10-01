@@ -25,8 +25,6 @@ import javax.validation.Valid;
 public class UserController {
     private final UserService service;
 
-
-
     @GetMapping(value = "/sign/in")
     public ResponseEntity<AccountDto> signIn(@ModelAttribute @Valid @Validated(value = {AccountValid.SignIn.class})
                                              SignInRequest signInRequest, HttpServletResponse response) throws CommonException {
@@ -39,4 +37,5 @@ public class UserController {
                                              HttpServletResponse response) throws CommonException {
         return new ResponseEntity<>(service.signUp(signUpRequest, response), HttpStatus.OK);
     }
+
 }

@@ -1,6 +1,8 @@
 package com.server.base.components.configure.security.jwt;
 
+import com.server.base.components.configure.ConfigMsg;
 import com.server.base.components.constants.Constants;
+import io.jsonwebtoken.ExpiredJwtException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.security.core.Authentication;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.GenericFilterBean;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -44,6 +47,12 @@ public class JwtFilter extends GenericFilterBean {
         }
 
         return null;
+    }
+
+
+    @PostConstruct
+    public void enabled(){
+        ConfigMsg.msg("JwtFilter");
     }
 }
 
