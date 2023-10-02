@@ -3,6 +3,7 @@ package com.server.base.components.configure.security;
 import com.server.base.components.configure.ConfigMsg;
 import com.server.base.components.configure.security.jwt.JwtAccessDenialHandler;
 import com.server.base.components.configure.security.jwt.JwtAuthenticationEntryPoint;
+import com.server.base.components.configure.security.jwt.JwtFilter;
 import com.server.base.components.configure.security.jwt.JwtSecurityConfig;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -12,6 +13,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.AuthenticationFilter;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.annotation.PostConstruct;
 
@@ -29,23 +32,25 @@ public class Config {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
        return   httpSecurity
-                .csrf().disable() //token 사용이므로 csrf disable
+                .csrf().disable() //token 사용이므로 csrf disable\
                 .cors().and()
+
                 .exceptionHandling(
                         handler -> {
                             handler.authenticationEntryPoint(jwtAuthenticationEntryPoint);
                             handler.accessDeniedHandler(jwtAccessDeniedHandler);
                         }
                 )
+
                 .sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(
-                        request -> {
-                            request.antMatchers("/api/v1/user/*").permitAll(); // /api/user/* 는 모두 허용
-                            request.anyRequest().authenticated(); //이외는 허용하지 않음
-                        }
-                )
+
+                .authorizeHttpRequests() // /api/user/* 는 모두 허용
+                .antMatchers("/api/v1/user/sign/in").permitAll()
+                .anyRequest().authenticated() //이외는 허용하지 않음
+                .and()
+
                 .apply(jwtSecurityConfig).and()
-               .build();
+                .build();
     }
 
 

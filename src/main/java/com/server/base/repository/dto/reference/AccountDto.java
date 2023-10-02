@@ -1,12 +1,17 @@
 package com.server.base.repository.dto.reference;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.server.base.components.enums.Role;
 import com.server.base.components.validations.AccountValid;
 import com.server.base.components.validations.ProfileValid;
 import com.server.base.components.validations.TicketValid;
 import com.querydsl.core.annotations.QueryProjection;
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.Transient;
 import javax.validation.constraints.Email;
@@ -14,6 +19,7 @@ import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,33 +29,73 @@ import java.util.Objects;
  */
 @Data
 @NoArgsConstructor
-@JsonIgnoreProperties(value = {"lastSignDate", "userPwd"}, allowSetters = false)
+@JsonIgnoreProperties(value = {"regDate","lastSignDate", "userPwd"}, allowGetters = false)
 @Getter
 @Setter
-public class AccountDto implements Serializable {
+public class AccountDto implements Serializable, UserDetails {
     @NotEmpty(message = "계정 정보가 필요합니다.", groups = {ProfileValid.Save.class, TicketValid.Raise.class})
     private Long userNo;
 
     @NotEmpty(message = "아이디를 입력하세요.", groups = {AccountValid.SignUp.class, AccountValid.SignIn.class, AccountValid.FindPwd.class})
     private String userId;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotEmpty(message = "비밀번호를 입력하세요.", groups = {
                                                         AccountValid.SignUp.class,
                                                         AccountValid.SignIn.class,
                                                         AccountValid.changePwd.class
                                                      })
     private String userPwd;
+
     private LocalDateTime regDate;
     private LocalDateTime lastSignDate;
-
+    private Role role;
 
     @QueryProjection
-    public AccountDto(Long userNo, String userId, String userPwd, LocalDateTime regDate, LocalDateTime lastSignDate) {
+    public AccountDto(Long userNo, String userId, String userPwd, LocalDateTime regDate, LocalDateTime lastSignDate, Role role) {
         this.userNo = userNo;
         this.userId = userId;
         this.userPwd = userPwd;
         this.regDate = regDate;
         this.lastSignDate = lastSignDate;
+        this.role = role;
+    }
+
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        Collection<GrantedAuthority> authorities = new ArrayList<>();
+
+        authorities.add(new SimpleGrantedAuthority(role.name()));
+        return authorities;
+    }
+
+    @Override
+    public String getPassword() {
+        return null;
+    }
+
+    @Override
+    public String getUsername() {
+        return this.getUserId();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 }

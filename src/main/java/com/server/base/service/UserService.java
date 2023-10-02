@@ -1,5 +1,6 @@
 package com.server.base.service;
 
+import com.server.base.components.configure.security.jwt.TokenProvider;
 import com.server.base.components.constants.Constants;
 import com.server.base.components.exceptions.BecauseOf;
 import com.server.base.components.exceptions.CommonException;
@@ -11,6 +12,12 @@ import com.server.base.repository.userRepository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,12 +32,12 @@ import java.util.Optional;
 @Slf4j
 @RequiredArgsConstructor
 @Transactional(rollbackFor = Exception.class)
-public class UserService {
+public class UserService implements UserDetailsService {
     private final UserRepository repository;
     private final ModelMapper mapper;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
-    private final TokenControl tokenControl;
 
+    private final TokenProvider tokenProvider;
 
 
     private Boolean isPasswordMatched(String rawPassword, String encryptedPassword) {
@@ -41,9 +48,22 @@ public class UserService {
         accountDto.setUserPwd(bCryptPasswordEncoder.encode(accountDto.getUserPwd()));
     }
 
+    @Override
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+        SignInRequest signInRequest = new SignInRequest();
+        signInRequest.setUserId(userName);
+        log.warn("LOAD {}" ,repository.signIn(signInRequest).orElseThrow(() -> new UsernameNotFoundException(userName)));
+        return repository.signIn(signInRequest).orElseThrow(() -> new UsernameNotFoundException(userName));
+    }
+
     public AccountDto signIn(SignInRequest signInRequest, HttpServletResponse response) throws CommonException {
         AccountDto dto = repository.signIn(signInRequest).orElseThrow(() -> new CommonException(BecauseOf.ACCOUNT_NOT_EXIST));
         if(!this.isPasswordMatched(signInRequest.getUserPwd(), dto.getUserPwd())) throw new CommonException(BecauseOf.PASSWORD_NOT_MATCHED);
+
+
+        Authentication authentication = new UsernamePasswordAuthenticationToken(dto, null);
+        String token = tokenProvider.createToken(authentication);
+        response.addHeader("Authorization", token);
 
         return dto;
     }
@@ -59,9 +79,11 @@ public class UserService {
         Account account = mapper.map(dto, Account.class);
         account = repository.save(account);
         dto = mapper.map(account, AccountDto.class);
-
-        response.addHeader(Constants.TOKEN_NAME, tokenControl.encrypt(dto));
+        Authentication authentication = new UsernamePasswordAuthenticationToken(dto, null);
+        String token = tokenProvider.createToken(authentication);
+        response.addHeader("Authorization", token);
         return dto;
     }
+
 
 }

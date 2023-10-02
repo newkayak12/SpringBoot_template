@@ -29,7 +29,8 @@ public class UserRepositoryImpl extends QuerydslRepositorySupport implements Use
                                         account.userId,
                                         account.userPwd,
                                         account.regDate,
-                                        account.lastSignDate
+                                        account.lastSignDate,
+                                        account.role
                                 )
                         )
                         .from(account)

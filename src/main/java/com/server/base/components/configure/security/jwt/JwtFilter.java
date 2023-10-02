@@ -24,13 +24,20 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JwtFilter extends GenericFilterBean {
     private final TokenProvider tokenProvider;
+    private String BEARER_PREFIX = "Bearer ";
 
     @Override  //실제 필터링 로직 / 토큰의 인증정보를 SecurityContext에 저장
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         String jwt = this.resolveToken(httpServletRequest);
 
-        if ( StringUtils.hasText(jwt) && tokenProvider.validateToken(jwt) ) {
+        System.out.println("??PATH "+ !httpServletRequest.getServletPath().startsWith("/api/v1/user/"));
+
+        if (
+                !httpServletRequest.getServletPath().startsWith("/api/v1/user/") &&
+                StringUtils.hasText(jwt) &&
+                tokenProvider.validateToken(jwt)
+        ) {
             Authentication authentication = tokenProvider.getAuthentication(jwt);
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
@@ -42,8 +49,9 @@ public class JwtFilter extends GenericFilterBean {
     private String resolveToken( HttpServletRequest request ) {
         String bearerToken = request.getHeader(Constants.TOKEN_NAME);
 
-        if(StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
-            return bearerToken.replace("Bearer ", "");
+
+        if(StringUtils.hasText(bearerToken) && bearerToken.startsWith(BEARER_PREFIX)) {
+            return bearerToken.replace(BEARER_PREFIX, "");
         }
 
         return null;

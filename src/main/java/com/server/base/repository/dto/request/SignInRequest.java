@@ -14,7 +14,4 @@ import lombok.Setter;
         "regDate",
 })
 public class SignInRequest extends AccountDto {
-    public SignInRequest(String userId, String userPwd) {
-        super(null, userId, userPwd, null, null);
-    }
 }

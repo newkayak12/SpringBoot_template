@@ -31,14 +31,16 @@ public class ControllerAdvisor{
     }
 
     @ResponseStatus(value = HttpStatus.FORBIDDEN)
-    @ExceptionHandler(value = {MalformedJwtException.class, UnsupportedJwtException.class, SignatureException.class , IllegalArgumentException.class})
-    public ResponseEntity illegalTokenExceptionHandler() {
+    @ExceptionHandler(value = {MalformedJwtException.class, UnsupportedJwtException.class, SignatureException.class})
+    public ResponseEntity illegalTokenExceptionHandler(Exception e) {
+        e.printStackTrace();
         return new ResponseEntity("올바르지 않은 토큰입니다.", HttpStatus.FORBIDDEN);
     }
 
     @ResponseStatus(value = HttpStatus.UNAUTHORIZED)
     @ExceptionHandler(value = {ExpiredJwtException.class})
-    public ResponseEntity invalidTokenExceptionHandler() {
+    public ResponseEntity invalidTokenExceptionHandler(Exception e) {
+        e.printStackTrace();
         return new ResponseEntity("접근 권한이 없습니다.", HttpStatus.UNAUTHORIZED);
     }
 
