@@ -6712,3 +6712,1425 @@ Security filter chain: [
 2023-10-02 22:02:30.683  WARN 46426 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m51s740ms).
 2023-10-02 22:09:01.676  WARN 46426 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m30s993ms).
 2023-10-02 22:11:07.860  WARN 46426 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m6s183ms).
+2023-10-02 22:47:03.719  WARN 46426 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m43s552ms).
+2023-10-02 22:59:44.761  WARN 46426 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m11s39ms).
+2023-10-02 23:35:35.183  INFO 46426 --- [http-nio-10000-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@480fb86a
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+role: ROLE_USER
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: f65acab5-5363-418c-ad72-bd241fb64fe8
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:35:40.594  WARN 46426 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m55s290ms).
+2023-10-02 23:35:55.199  INFO 46426 --- [http-nio-10000-exec-7] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@480fb86a
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 7d06da7f-8eb1-4c6a-a576-5106b166bb90
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:40:33.033  INFO 46426 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:40:33.038  INFO 46426 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:40:33.047  INFO 46426 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:40:36.006  INFO 48113 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:40:36.007  INFO 48113 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:40:36.007  WARN 48113 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@22d6cac2 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:40:36.171  INFO 48113 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:40:36.198  INFO 48113 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:40:36.198  INFO 48113 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:40:36.205  INFO 48113 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:40:36.210  INFO 48113 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:40:36.210  INFO 48113 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:40:36.210  WARN 48113 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:40:36.626  INFO 48113 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:40:36.653  INFO 48113 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:40:36.739  INFO 48113 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:40:36.911  INFO 48113 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:40:36.915  INFO 48113 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:40:36.915  INFO 48113 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:40:36.974  INFO 48113 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:40:36.974  INFO 48113 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 764 ms
+2023-10-02 23:40:37.121  INFO 48113 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:40:37.151  INFO 48113 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:40:37.221  INFO 48113 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:40:37.269  INFO 48113 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:40:38.951  INFO 48113 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:40:38.970  INFO 48113 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:40:39.510  INFO 48113 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:40:39.517  INFO 48113 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:40:39.893  INFO 48113 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3284de45, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5390862e, org.springframework.security.web.context.SecurityContextPersistenceFilter@594965c9, org.springframework.security.web.header.HeaderWriterFilter@13d1653, org.springframework.web.filter.CorsFilter@4fccdd1d, org.springframework.security.web.authentication.logout.LogoutFilter@4eb3b690, com.server.base.components.configure.security.jwt.JwtFilter@7ed7ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78839c2e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7890324e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22c0c0bc, org.springframework.security.web.session.SessionManagementFilter@73476e2d, org.springframework.security.web.access.ExceptionTranslationFilter@609edb55, org.springframework.security.web.access.intercept.AuthorizationFilter@6600d07d]
+2023-10-02 23:40:39.896  WARN 48113 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:40:39.978  WARN 48113 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:40:40.143  INFO 48113 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:40:40.195  INFO 48113 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:40:40.208  INFO 48113 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 5.067 seconds (JVM running for 5.59)
+2023-10-02 23:40:40.304  WARN 48113 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:40:40.445  INFO 48113 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:40:40.446  INFO 48113 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:40:40.447  INFO 48113 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 23:40:41.663  INFO 48113 --- [http-nio-10000-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@47b7cb89
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 31649e9a-67fe-4586-8aa8-590d47b2e4e3
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:40:49.390  INFO 48113 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:40:49.394  INFO 48113 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:40:49.403  INFO 48113 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:40:56.370  INFO 48132 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:40:56.371  INFO 48132 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:40:56.371  WARN 48132 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@1654a892 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:40:56.601  INFO 48132 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:40:56.681  INFO 48132 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:40:56.681  INFO 48132 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:40:56.689  INFO 48132 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:40:56.694  INFO 48132 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:40:56.694  INFO 48132 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:40:56.695  WARN 48132 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:40:57.083  INFO 48132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:40:57.109  INFO 48132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:40:57.201  INFO 48132 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:40:57.374  INFO 48132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:40:57.377  INFO 48132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:40:57.378  INFO 48132 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:40:57.432  INFO 48132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:40:57.432  INFO 48132 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 737 ms
+2023-10-02 23:40:57.563  INFO 48132 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:40:57.583  INFO 48132 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:40:57.650  INFO 48132 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:40:57.686  INFO 48132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:40:58.094  INFO 48132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:40:58.107  INFO 48132 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:40:58.585  INFO 48132 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:40:58.592  INFO 48132 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:40:58.925  INFO 48132 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a5c6b30, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49616310, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a3f3bc4, org.springframework.security.web.header.HeaderWriterFilter@6e70861, org.springframework.web.filter.CorsFilter@5ee76cf2, org.springframework.security.web.authentication.logout.LogoutFilter@4fccdd1d, com.server.base.components.configure.security.jwt.JwtFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a3611b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@91c11b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6662974a, org.springframework.security.web.session.SessionManagementFilter@3c39c739, org.springframework.security.web.access.ExceptionTranslationFilter@35d62807, org.springframework.security.web.access.intercept.AuthorizationFilter@16eb01d4]
+2023-10-02 23:40:58.928  WARN 48132 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:40:59.001  WARN 48132 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:40:59.163  INFO 48132 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:40:59.210  INFO 48132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:40:59.223  INFO 48132 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 3.325 seconds (JVM running for 3.62)
+2023-10-02 23:40:59.369  INFO 48132 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:40:59.369  INFO 48132 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:40:59.371  INFO 48132 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-10-02 23:40:59.384  WARN 48132 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:41:06.202  INFO 48132 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:41:06.206  INFO 48132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:41:06.215  INFO 48132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:41:08.486  INFO 48143 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:41:08.487  INFO 48143 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:41:08.487  WARN 48143 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@1654a892 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:41:08.739  INFO 48143 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:41:08.849  INFO 48143 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:41:08.850  INFO 48143 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:41:08.857  INFO 48143 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:41:08.862  INFO 48143 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:41:08.862  INFO 48143 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:41:08.862  WARN 48143 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:41:09.286  INFO 48143 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:41:09.316  INFO 48143 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:41:09.404  INFO 48143 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:41:09.583  INFO 48143 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:41:09.588  INFO 48143 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:41:09.588  INFO 48143 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:41:09.646  INFO 48143 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:41:09.646  INFO 48143 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 784 ms
+2023-10-02 23:41:09.776  INFO 48143 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:41:09.795  INFO 48143 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:41:09.859  INFO 48143 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:41:09.894  INFO 48143 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:41:10.160  INFO 48143 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:41:10.173  INFO 48143 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:41:10.613  INFO 48143 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:41:10.622  INFO 48143 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:41:10.948  INFO 48143 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a5c6b30, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49616310, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a3f3bc4, org.springframework.security.web.header.HeaderWriterFilter@6e70861, org.springframework.web.filter.CorsFilter@5ee76cf2, org.springframework.security.web.authentication.logout.LogoutFilter@4fccdd1d, com.server.base.components.configure.security.jwt.JwtFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a3611b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@91c11b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6662974a, org.springframework.security.web.session.SessionManagementFilter@3c39c739, org.springframework.security.web.access.ExceptionTranslationFilter@35d62807, org.springframework.security.web.access.intercept.AuthorizationFilter@16eb01d4]
+2023-10-02 23:41:10.951  WARN 48143 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:41:11.026  WARN 48143 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:41:11.184  INFO 48143 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:41:11.231  INFO 48143 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:41:11.244  INFO 48143 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 3.333 seconds (JVM running for 3.654)
+2023-10-02 23:41:11.347  INFO 48143 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:41:11.347  INFO 48143 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:41:11.348  INFO 48143 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 23:41:11.395  WARN 48143 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:41:13.107  INFO 48143 --- [http-nio-10000-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@56fda56f
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 43165ee4-a892-456a-b050-77832c9d34b2
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:42:03.891  INFO 48143 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:42:03.895  INFO 48143 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:42:03.905  INFO 48143 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:42:08.233  INFO 48183 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:42:08.235  INFO 48183 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:42:08.235  WARN 48183 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@1654a892 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:42:08.472  INFO 48183 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:42:08.555  INFO 48183 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:42:08.556  INFO 48183 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:42:08.565  INFO 48183 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:42:08.571  INFO 48183 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:42:08.571  INFO 48183 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:42:08.572  WARN 48183 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:42:08.934  INFO 48183 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:42:08.957  INFO 48183 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:42:09.039  INFO 48183 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:42:09.202  INFO 48183 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:42:09.205  INFO 48183 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:42:09.205  INFO 48183 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:42:09.257  INFO 48183 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:42:09.258  INFO 48183 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 686 ms
+2023-10-02 23:42:09.391  INFO 48183 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:42:09.409  INFO 48183 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:42:09.472  INFO 48183 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:42:09.506  INFO 48183 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:42:09.932  INFO 48183 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:42:09.950  INFO 48183 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:42:10.453  INFO 48183 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:42:10.465  INFO 48183 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:42:10.788  INFO 48183 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b0d818d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7212b28e, org.springframework.security.web.context.SecurityContextPersistenceFilter@cbaabfb, org.springframework.security.web.header.HeaderWriterFilter@7e1ae693, org.springframework.web.filter.CorsFilter@306c8e09, org.springframework.security.web.authentication.logout.LogoutFilter@8cd2bb5, com.server.base.components.configure.security.jwt.JwtFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eb3b690, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55b78dad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@87df88d, org.springframework.security.web.session.SessionManagementFilter@360e4235, org.springframework.security.web.access.ExceptionTranslationFilter@21457b14, org.springframework.security.web.access.intercept.AuthorizationFilter@2c7ac998]
+2023-10-02 23:42:10.794  WARN 48183 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:42:10.864  WARN 48183 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:42:11.020  INFO 48183 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:42:11.065  INFO 48183 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:42:11.078  INFO 48183 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 3.656 seconds (JVM running for 3.942)
+2023-10-02 23:42:11.253  WARN 48183 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:42:11.418  INFO 48183 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:42:11.419  INFO 48183 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:42:11.420  INFO 48183 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 23:42:13.000  INFO 48183 --- [http-nio-10000-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@3644216c
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: b88c52a8-4197-4380-980f-82cae0265141
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:43:21.340  INFO 48183 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:43:21.344  INFO 48183 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:43:21.354  INFO 48183 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:43:42.639  INFO 48217 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:43:42.640  INFO 48217 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:43:42.640  WARN 48217 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@1654a892 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:43:42.873  INFO 48217 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:43:42.973  INFO 48217 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:43:42.974  INFO 48217 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:43:42.984  INFO 48217 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:43:42.990  INFO 48217 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:43:42.990  INFO 48217 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:43:42.990  WARN 48217 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:43:43.339  INFO 48217 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:43:43.362  INFO 48217 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:43:43.438  INFO 48217 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:43:43.596  INFO 48217 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:43:43.600  INFO 48217 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:43:43.600  INFO 48217 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:43:43.651  INFO 48217 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:43:43.651  INFO 48217 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 661 ms
+2023-10-02 23:43:43.767  INFO 48217 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:43:43.784  INFO 48217 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:43:43.843  INFO 48217 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:43:43.887  INFO 48217 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:43:44.366  INFO 48217 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:43:44.386  INFO 48217 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:43:44.897  INFO 48217 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:43:44.909  INFO 48217 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:43:45.253  INFO 48217 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f2a5064, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43a72f0f, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e0600a4, org.springframework.security.web.header.HeaderWriterFilter@78839c2e, org.springframework.web.filter.CorsFilter@6fe33512, org.springframework.security.web.authentication.logout.LogoutFilter@5b5d6f9c, com.server.base.components.configure.security.jwt.JwtFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1773faf8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f70015, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fa77770, org.springframework.security.web.session.SessionManagementFilter@21457b14, org.springframework.security.web.access.ExceptionTranslationFilter@594965c9, org.springframework.security.web.access.intercept.AuthorizationFilter@1eda12b3]
+2023-10-02 23:43:45.256  WARN 48217 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:43:45.332  WARN 48217 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:43:45.491  INFO 48217 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:43:45.543  INFO 48217 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:43:45.557  INFO 48217 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 3.505 seconds (JVM running for 3.988)
+2023-10-02 23:43:45.750  WARN 48217 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:43:45.844  INFO 48217 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:43:45.845  INFO 48217 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:43:45.846  INFO 48217 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 23:43:50.303  INFO 48217 --- [http-nio-10000-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@4144d68d
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 0c9f3e5f-ca85-4b75-9b66-52bcc65943d3
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:43:50.321 ERROR 48217 --- [http-nio-10000-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
+	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:132) ~[jjwt-api-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:527) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.server.base.components.configure.security.jwt.TokenProvider.validateToken(TokenProvider.java:66) ~[main/:na]
+	at com.server.base.components.configure.security.jwt.JwtFilter.doFilter(JwtFilter.java:37) ~[main/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.7.11.jar:2.7.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2023-10-02 23:43:50.323  INFO 48217 --- [http-nio-10000-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@70c7e6b8
+
+servletPath:/error
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 0c9f3e5f-ca85-4b75-9b66-52bcc65943d3
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:43:50.324 ERROR 48217 --- [http-nio-10000-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
+	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:132) ~[jjwt-api-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:527) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.server.base.components.configure.security.jwt.TokenProvider.validateToken(TokenProvider.java:66) ~[main/:na]
+	at com.server.base.components.configure.security.jwt.JwtFilter.doFilter(JwtFilter.java:37) ~[main/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:427) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:373) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:237) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:319) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:164) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2023-10-02 23:43:50.325 ERROR 48217 --- [http-nio-10000-exec-2] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
+	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:132) ~[jjwt-api-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:527) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.server.base.components.configure.security.jwt.TokenProvider.validateToken(TokenProvider.java:66) ~[main/:na]
+	at com.server.base.components.configure.security.jwt.JwtFilter.doFilter(JwtFilter.java:37) ~[main/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:427) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:373) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:237) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:319) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:164) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2023-10-02 23:44:27.587  INFO 48217 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:44:27.590  INFO 48217 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:44:27.605  INFO 48217 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:44:30.528  INFO 48246 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:44:30.530  INFO 48246 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:44:30.530  WARN 48246 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@1654a892 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:44:30.765  INFO 48246 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:44:30.885  INFO 48246 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:44:30.886  INFO 48246 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:44:30.895  INFO 48246 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:44:30.901  INFO 48246 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:44:30.901  INFO 48246 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:44:30.901  WARN 48246 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:44:31.228  INFO 48246 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:44:31.251  INFO 48246 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:44:31.332  INFO 48246 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:44:31.480  INFO 48246 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:44:31.484  INFO 48246 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:44:31.484  INFO 48246 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:44:31.533  INFO 48246 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:44:31.533  INFO 48246 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 632 ms
+2023-10-02 23:44:31.648  INFO 48246 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:44:31.661  INFO 48246 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:44:31.713  INFO 48246 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:44:31.749  INFO 48246 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:44:32.308  INFO 48246 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:44:32.325  INFO 48246 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:44:32.756  INFO 48246 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:44:32.766  INFO 48246 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:44:33.089  INFO 48246 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b0d818d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7212b28e, org.springframework.security.web.context.SecurityContextPersistenceFilter@cbaabfb, org.springframework.security.web.header.HeaderWriterFilter@7e1ae693, org.springframework.web.filter.CorsFilter@306c8e09, org.springframework.security.web.authentication.logout.LogoutFilter@8cd2bb5, com.server.base.components.configure.security.jwt.JwtFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eb3b690, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55b78dad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@87df88d, org.springframework.security.web.session.SessionManagementFilter@360e4235, org.springframework.security.web.access.ExceptionTranslationFilter@21457b14, org.springframework.security.web.access.intercept.AuthorizationFilter@2c7ac998]
+2023-10-02 23:44:33.095  WARN 48246 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:44:33.162  WARN 48246 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:44:33.313  INFO 48246 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:44:33.357  INFO 48246 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:44:33.371  INFO 48246 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 3.37 seconds (JVM running for 3.631)
+2023-10-02 23:44:33.467  INFO 48246 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:44:33.467  INFO 48246 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:44:33.468  INFO 48246 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 23:44:33.560  WARN 48246 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:44:37.360  INFO 48246 --- [http-nio-10000-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@45a2a33a
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 44c1a362-31ae-40cc-b909-b0a9e7c7e1a8
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:44:37.369 ERROR 48246 --- [http-nio-10000-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.NullPointerException: null
+	at com.server.base.components.configure.security.jwt.JwtFilter.resolveToken(JwtFilter.java:56) ~[main/:na]
+	at com.server.base.components.configure.security.jwt.JwtFilter.doFilter(JwtFilter.java:32) ~[main/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.7.11.jar:2.7.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2023-10-02 23:44:37.370  INFO 48246 --- [http-nio-10000-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@5d2f36bd
+
+servletPath:/error
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 44c1a362-31ae-40cc-b909-b0a9e7c7e1a8
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:44:37.371 ERROR 48246 --- [http-nio-10000-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+java.lang.NullPointerException: null
+	at com.server.base.components.configure.security.jwt.JwtFilter.resolveToken(JwtFilter.java:56) ~[main/:na]
+	at com.server.base.components.configure.security.jwt.JwtFilter.doFilter(JwtFilter.java:32) ~[main/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:427) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:373) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:237) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:319) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:164) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2023-10-02 23:44:37.371 ERROR 48246 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+java.lang.NullPointerException: null
+	at com.server.base.components.configure.security.jwt.JwtFilter.resolveToken(JwtFilter.java:56) ~[main/:na]
+	at com.server.base.components.configure.security.jwt.JwtFilter.doFilter(JwtFilter.java:32) ~[main/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:427) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:373) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:237) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:319) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:164) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2023-10-02 23:46:02.132  INFO 48246 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:46:02.138  INFO 48246 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:46:02.148  INFO 48246 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:46:05.130  INFO 48308 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:46:05.131  INFO 48308 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:46:05.131  WARN 48308 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@1654a892 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:46:05.363  INFO 48308 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:46:05.439  INFO 48308 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:46:05.439  INFO 48308 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:46:05.446  INFO 48308 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:46:05.451  INFO 48308 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:46:05.451  INFO 48308 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:46:05.451  WARN 48308 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:46:05.834  INFO 48308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:46:05.858  INFO 48308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:46:05.944  INFO 48308 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:46:06.113  INFO 48308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:46:06.117  INFO 48308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:46:06.117  INFO 48308 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:46:06.172  INFO 48308 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:46:06.172  INFO 48308 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 721 ms
+2023-10-02 23:46:06.302  INFO 48308 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:46:06.320  INFO 48308 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:46:06.383  INFO 48308 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:46:06.418  INFO 48308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:46:06.818  INFO 48308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:46:06.828  INFO 48308 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:46:07.385  INFO 48308 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:46:07.395  INFO 48308 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:46:07.831  INFO 48308 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b0d818d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7212b28e, org.springframework.security.web.context.SecurityContextPersistenceFilter@cbaabfb, org.springframework.security.web.header.HeaderWriterFilter@7e1ae693, org.springframework.web.filter.CorsFilter@306c8e09, org.springframework.security.web.authentication.logout.LogoutFilter@8cd2bb5, com.server.base.components.configure.security.jwt.JwtFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eb3b690, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55b78dad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@87df88d, org.springframework.security.web.session.SessionManagementFilter@360e4235, org.springframework.security.web.access.ExceptionTranslationFilter@21457b14, org.springframework.security.web.access.intercept.AuthorizationFilter@2c7ac998]
+2023-10-02 23:46:07.842  WARN 48308 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:46:08.004  WARN 48308 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:46:08.188  INFO 48308 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:46:08.242  INFO 48308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:46:08.256  INFO 48308 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 3.85 seconds (JVM running for 4.357)
+2023-10-02 23:46:08.474  WARN 48308 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:46:08.699  INFO 48308 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:46:08.699  INFO 48308 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:46:08.700  INFO 48308 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 23:46:09.906  INFO 48308 --- [http-nio-10000-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@3d90750e
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 667a2a0d-50d6-4101-ab4d-3cf5eaa40ad8
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:46:09.931 ERROR 48308 --- [http-nio-10000-exec-1] c.s.b.c.c.security.jwt.TokenProvider     : claims {sub=test, iss=base, BODY={userNo=1, userId=test, role=ROLE_USER, password=null, enabled=true, username=test, authorities=[{authority=ROLE_USER}], accountNonExpired=true, accountNonLocked=true, credentialsNonExpired=true}}
+2023-10-02 23:46:09.942 ERROR 48308 --- [http-nio-10000-exec-1] c.s.b.c.c.security.jwt.TokenProvider     : claims {sub=test, iss=base, BODY={userNo=1, userId=test, role=ROLE_USER, password=null, enabled=true, username=test, authorities=[{authority=ROLE_USER}], accountNonExpired=true, accountNonLocked=true, credentialsNonExpired=true}}
+2023-10-02 23:47:03.371  INFO 48308 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:47:03.375  INFO 48308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:47:03.399  INFO 48308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:47:27.027  INFO 48339 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:47:27.028  INFO 48339 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:47:27.028  WARN 48339 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@1654a892 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:47:27.294  INFO 48339 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:47:27.407  INFO 48339 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:47:27.407  INFO 48339 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:47:27.417  INFO 48339 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:47:27.423  INFO 48339 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:47:27.423  INFO 48339 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:47:27.423  WARN 48339 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:47:27.788  INFO 48339 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:47:27.815  INFO 48339 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:47:27.895  INFO 48339 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:47:28.059  INFO 48339 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:47:28.062  INFO 48339 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:47:28.062  INFO 48339 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:47:28.113  INFO 48339 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:47:28.113  INFO 48339 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 690 ms
+2023-10-02 23:47:28.230  INFO 48339 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:47:28.247  INFO 48339 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:47:28.305  INFO 48339 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:47:28.342  INFO 48339 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:47:29.214  INFO 48339 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:47:29.234  INFO 48339 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:47:29.763  INFO 48339 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:47:29.769  INFO 48339 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:47:30.102  INFO 48339 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f3b11e6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28da5c4d, org.springframework.security.web.context.SecurityContextPersistenceFilter@44bd7f24, org.springframework.security.web.header.HeaderWriterFilter@3ef4a8fb, org.springframework.web.filter.CorsFilter@7c928399, org.springframework.security.web.authentication.logout.LogoutFilter@238d27ef, com.server.base.components.configure.security.jwt.JwtFilter@45e11627, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55b78dad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a3272e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bcca516, org.springframework.security.web.session.SessionManagementFilter@48614fb3, org.springframework.security.web.access.ExceptionTranslationFilter@341141ab, org.springframework.security.web.access.intercept.AuthorizationFilter@308e465b]
+2023-10-02 23:47:30.108  WARN 48339 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:47:30.215  WARN 48339 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:47:30.416  INFO 48339 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:47:30.473  INFO 48339 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:47:30.492  INFO 48339 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 4.358 seconds (JVM running for 4.635)
+2023-10-02 23:47:30.683  INFO 48339 --- [RMI TCP Connection(5)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:47:30.684  INFO 48339 --- [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:47:30.686  INFO 48339 --- [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 23:47:30.706  WARN 48339 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:47:32.284  INFO 48339 --- [http-nio-10000-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@11ae2f8b
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsInBhc3N3b3JkIjpudWxsLCJlbmFibGVkIjp0cnVlLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.adoqJ13tMVaLWjS9G2l_hW5BZ8NYS61aQu69QxGrJXl-cH42qsrELIGBZPxBQN8PCzzOQDYVGhJjI0_GIxOvlQ
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 72199e9a-df36-4a53-a6a8-b990711b6866
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:47:32.327 ERROR 48339 --- [http-nio-10000-exec-2] c.s.b.c.c.security.jwt.TokenProvider     : claims {sub=test, iss=base, BODY={userNo=1, userId=test, role=ROLE_USER, password=null, enabled=true, username=test, authorities=[{authority=ROLE_USER}], accountNonExpired=true, accountNonLocked=true, credentialsNonExpired=true}}
+2023-10-02 23:50:56.514  INFO 48339 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:50:56.520  INFO 48339 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:50:56.529  INFO 48339 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:51:00.600  INFO 48451 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:51:00.601  INFO 48451 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:51:00.601  WARN 48451 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@1654a892 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:51:00.822  INFO 48451 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:51:00.934  INFO 48451 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:51:00.934  INFO 48451 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:51:00.946  INFO 48451 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:51:00.952  INFO 48451 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:51:00.952  INFO 48451 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:51:00.952  WARN 48451 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:51:01.328  INFO 48451 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:51:01.352  INFO 48451 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:51:01.438  INFO 48451 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:51:01.602  INFO 48451 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:51:01.606  INFO 48451 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:51:01.606  INFO 48451 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:51:01.659  INFO 48451 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:51:01.659  INFO 48451 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 707 ms
+2023-10-02 23:51:01.789  INFO 48451 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:51:01.808  INFO 48451 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:51:01.871  INFO 48451 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:51:01.914  INFO 48451 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:51:02.504  INFO 48451 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:51:02.516  INFO 48451 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:51:03.164  INFO 48451 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:51:03.172  INFO 48451 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:51:03.546  INFO 48451 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f2a5064, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43a72f0f, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e0600a4, org.springframework.security.web.header.HeaderWriterFilter@78839c2e, org.springframework.web.filter.CorsFilter@6fe33512, org.springframework.security.web.authentication.logout.LogoutFilter@5b5d6f9c, com.server.base.components.configure.security.jwt.JwtFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1773faf8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f70015, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fa77770, org.springframework.security.web.session.SessionManagementFilter@21457b14, org.springframework.security.web.access.ExceptionTranslationFilter@594965c9, org.springframework.security.web.access.intercept.AuthorizationFilter@1eda12b3]
+2023-10-02 23:51:03.550  WARN 48451 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:51:03.625  WARN 48451 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:51:03.781  INFO 48451 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:51:03.829  INFO 48451 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:51:03.842  INFO 48451 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 4.045 seconds (JVM running for 4.444)
+2023-10-02 23:51:04.030  WARN 48451 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:51:04.207  INFO 48451 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:51:04.208  INFO 48451 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:51:04.209  INFO 48451 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 23:51:06.138  INFO 48451 --- [http-nio-10000-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/user/sign/in?userId=test&userPwd=1212':
+
+org.apache.catalina.connector.RequestFacade@2ddd721c
+
+servletPath:/api/v1/user/sign/in
+pathInfo:null
+headers: 
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 87efaebd-2a40-4d36-a53d-3806330d6e25
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:51:13.841  INFO 48451 --- [http-nio-10000-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@2ddd721c
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsImVuYWJsZWQiOnRydWUsInBhc3N3b3JkIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.V15uyUZpHv82c654MISOOvzwr-bw0QmJcjh7gTaBG-ww5Tp8I1RhYArrsi0oWNGt2a67qW8hM0bSymZ5dYTdSg
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: cea95da2-dcff-499f-9659-af002f74a2da
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-10-02 23:54:52.357  INFO 48451 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:54:52.362  INFO 48451 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-02 23:54:52.375  INFO 48451 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-02 23:54:55.253  INFO 48535 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:54:55.255  INFO 48535 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=base, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:54:55.255  WARN 48535 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location '[ConfigServerConfigDataResource@1654a892 uris = array<String>['http://newkayak.iptime.org:8888'], optional = false, profiles = list['local']]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:54:55.426  INFO 48535 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:54:55.448  INFO 48535 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=basee, profiles=[default], label=null, version=null, state=null
+2023-10-02 23:54:55.449  INFO 48535 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2023-10-02 23:54:55.455  INFO 48535 --- [main] com.server.base.BaseServiceApplication   : The following 1 profile is active: "local"
+2023-10-02 23:54:55.460  INFO 48535 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://newkayak.iptime.org:8888
+2023-10-02 23:54:55.461  INFO 48535 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=basee, profiles=[local], label=null, version=null, state=null
+2023-10-02 23:54:55.461  WARN 48535 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: Config Server file:/home/config/base-local.yml:27:13]
+2023-10-02 23:54:55.836  INFO 48535 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-02 23:54:55.860  INFO 48535 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2023-10-02 23:54:55.941  INFO 48535 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=68e8ad46-b918-352b-aa99-3a8533c1ffcb
+2023-10-02 23:54:56.104  INFO 48535 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2023-10-02 23:54:56.108  INFO 48535 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-02 23:54:56.108  INFO 48535 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-02 23:54:56.163  INFO 48535 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-02 23:54:56.163  INFO 48535 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 702 ms
+2023-10-02 23:54:56.291  INFO 48535 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-02 23:54:56.307  INFO 48535 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-02 23:54:56.370  INFO 48535 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-02 23:54:56.410  INFO 48535 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-02 23:54:56.869  INFO 48535 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-02 23:54:56.879  INFO 48535 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2023-10-02 23:54:57.090  INFO 48535 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-02 23:54:57.094  INFO 48535 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-02 23:54:57.411  INFO 48535 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@580c4c0b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@604e8a6, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a3a6216, org.springframework.security.web.header.HeaderWriterFilter@3f7bf0f6, org.springframework.web.filter.CorsFilter@5bc44d78, org.springframework.security.web.authentication.logout.LogoutFilter@edb8f0c, com.server.base.components.configure.security.jwt.JwtFilter@45e11627, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1de398c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@193c810, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f408960, org.springframework.security.web.session.SessionManagementFilter@3533d790, org.springframework.security.web.access.ExceptionTranslationFilter@3abb6aa, org.springframework.security.web.access.intercept.AuthorizationFilter@4b9dd787]
+2023-10-02 23:54:57.418  WARN 48535 --- [main] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-10-02 23:54:57.490  WARN 48535 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-10-02 23:54:57.646  INFO 48535 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-02 23:54:57.694  INFO 48535 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2023-10-02 23:54:57.706  INFO 48535 --- [main] com.server.base.BaseServiceApplication   : Started BaseServiceApplication in 3.105 seconds (JVM running for 3.57)
+2023-10-02 23:54:57.749  WARN 48535 --- [main] com.server.base.components.WakeUp        : bases is ready
+2023-10-02 23:54:57.910  INFO 48535 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-02 23:54:57.911  INFO 48535 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-02 23:54:57.912  INFO 48535 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-02 23:55:03.309  INFO 48535 --- [http-nio-10000-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/api/v1/test':
+
+org.apache.catalina.connector.RequestFacade@ec2aed3
+
+servletPath:/api/v1/test
+pathInfo:null
+headers: 
+authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaXNzIjoiYmFzZSIsIkJPRFkiOnsidXNlck5vIjoxLCJ1c2VySWQiOiJ0ZXN0Iiwicm9sZSI6IlJPTEVfVVNFUiIsImVuYWJsZWQiOnRydWUsInBhc3N3b3JkIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJhY2NvdW50Tm9uRXhwaXJlZCI6dHJ1ZSwiYWNjb3VudE5vbkxvY2tlZCI6dHJ1ZSwiY3JlZGVudGlhbHNOb25FeHBpcmVkIjp0cnVlfX0.V15uyUZpHv82c654MISOOvzwr-bw0QmJcjh7gTaBG-ww5Tp8I1RhYArrsi0oWNGt2a67qW8hM0bSymZ5dYTdSg
+user-agent: PostmanRuntime/7.33.0
+accept: */*
+postman-token: 18fd010d-e66b-46c4-a184-5db15daf0f66
+host: localhost:10000
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+

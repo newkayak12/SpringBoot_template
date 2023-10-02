@@ -13,6 +13,8 @@ public class Constants {
     public static String EMAIL;
     public static String EMAIL_KEY;
 
+    public static String AUTHORIZATION = "Authorization";
+
     @Value("${constant.salt}")
     public void setSalt(String _SALT) { SALT = _SALT; }
     @Value("${constant.token_name}")

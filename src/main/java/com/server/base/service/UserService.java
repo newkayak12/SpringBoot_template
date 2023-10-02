@@ -52,7 +52,6 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         SignInRequest signInRequest = new SignInRequest();
         signInRequest.setUserId(userName);
-        log.warn("LOAD {}" ,repository.signIn(signInRequest).orElseThrow(() -> new UsernameNotFoundException(userName)));
         return repository.signIn(signInRequest).orElseThrow(() -> new UsernameNotFoundException(userName));
     }
 
@@ -63,7 +62,7 @@ public class UserService implements UserDetailsService {
 
         Authentication authentication = new UsernamePasswordAuthenticationToken(dto, null);
         String token = tokenProvider.createToken(authentication);
-        response.addHeader("Authorization", token);
+        response.addHeader(Constants.AUTHORIZATION, token);
 
         return dto;
     }
@@ -81,7 +80,7 @@ public class UserService implements UserDetailsService {
         dto = mapper.map(account, AccountDto.class);
         Authentication authentication = new UsernamePasswordAuthenticationToken(dto, null);
         String token = tokenProvider.createToken(authentication);
-        response.addHeader("Authorization", token);
+        response.addHeader(Constants.AUTHORIZATION, token);
         return dto;
     }
 

@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerExceptionResolver;
@@ -28,6 +29,7 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
     }
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
+        System.out.println("SECU" + SecurityContextHolder.getContext().getAuthentication());
         resolver.resolveException(request, response, null, new ExpiredJwtException(null, null, authException.getMessage(), authException.getCause()));
     }
 

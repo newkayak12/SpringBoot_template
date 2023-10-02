@@ -56,7 +56,7 @@ public class TokenProvider implements InitializingBean {
                 .getBody();
 
         AccountDto principal = mapper.map(claims.get(BODY), AccountDto.class);
-        return new UsernamePasswordAuthenticationToken(principal, token);
+        return new UsernamePasswordAuthenticationToken(principal, token, principal.getAuthorities());
     }
 
 
@@ -64,7 +64,6 @@ public class TokenProvider implements InitializingBean {
          Claims claims = Jwts.parserBuilder()
                  .setSigningKey(key).build()
                  .parseClaimsJws(token).getBody();
-         log.error("claims {}", claims);
          AccountDto authorities = mapper.map(claims.get(BODY), AccountDto.class);
          String issuer = claims.getIssuer();
         return true;

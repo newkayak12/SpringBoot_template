@@ -31,7 +31,6 @@ public class JwtFilter extends GenericFilterBean {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         String jwt = this.resolveToken(httpServletRequest);
 
-        System.out.println("??PATH "+ !httpServletRequest.getServletPath().startsWith("/api/v1/user/"));
 
         if (
                 !httpServletRequest.getServletPath().startsWith("/api/v1/user/") &&
@@ -39,6 +38,7 @@ public class JwtFilter extends GenericFilterBean {
                 tokenProvider.validateToken(jwt)
         ) {
             Authentication authentication = tokenProvider.getAuthentication(jwt);
+            System.out.println("AUTH " + authentication);
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 
@@ -47,8 +47,7 @@ public class JwtFilter extends GenericFilterBean {
 
 
     private String resolveToken( HttpServletRequest request ) {
-        String bearerToken = request.getHeader(Constants.TOKEN_NAME);
-
+        String bearerToken = request.getHeader(Constants.AUTHORIZATION);
 
         if(StringUtils.hasText(bearerToken) && bearerToken.startsWith(BEARER_PREFIX)) {
             return bearerToken.replace(BEARER_PREFIX, "");

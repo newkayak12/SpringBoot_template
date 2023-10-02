@@ -3,7 +3,6 @@ package com.server.base.components.configure.security;
 import com.server.base.components.configure.ConfigMsg;
 import com.server.base.components.configure.security.jwt.JwtAccessDenialHandler;
 import com.server.base.components.configure.security.jwt.JwtAuthenticationEntryPoint;
-import com.server.base.components.configure.security.jwt.JwtFilter;
 import com.server.base.components.configure.security.jwt.JwtSecurityConfig;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -13,8 +12,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.AuthenticationFilter;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.annotation.PostConstruct;
 
