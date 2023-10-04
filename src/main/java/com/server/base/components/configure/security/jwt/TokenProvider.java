@@ -31,8 +31,9 @@ public class TokenProvider implements InitializingBean {
     private Key key;
     private String BODY = "BODY";
     private String BEARER_PREFIX = "Bearer ";
-
     private final ModelMapper mapper;
+
+    //기존 TokenManager와 비슷하다.
 
     @Override
     public void afterPropertiesSet() throws Exception {

@@ -23,7 +23,7 @@ public class JwtAccessDenialHandler implements AccessDeniedHandler {
 //https://colabear754.tistory.com/172
     private HandlerExceptionResolver resolver;
 
-    @Autowired
+    @Autowired //handlerExceptionResolver를 Qualifer로 지정해서 ControllerAdvice에서 처리하도록 위임
     public JwtAccessDenialHandler(@Qualifier("handlerExceptionResolver") HandlerExceptionResolver resolver) {
         this.resolver = resolver;
     }

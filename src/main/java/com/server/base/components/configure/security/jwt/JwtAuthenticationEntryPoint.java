@@ -23,7 +23,7 @@ import java.io.IOException;
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
     private  HandlerExceptionResolver resolver;
 
-    @Autowired
+    @Autowired //handlerExceptionResolver를 Qualifer로 지정해서 ControllerAdvice에서 처리하도록 위임
     public JwtAuthenticationEntryPoint(@Qualifier("handlerExceptionResolver") HandlerExceptionResolver resolver) {
         this.resolver = resolver;
     }

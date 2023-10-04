@@ -27,7 +27,15 @@ public class Config {
 
 
     /**
-     * 인증(Authentication) : 요청한 사람이 본인인지 확인하는 절차
+     *  동작
+     * 스프링 시큐리티는 서블릿 필터를 기본으로 하면서 스프링에서의 기능을 사용할 수 있다. DelegateFilterProxy에 위임해서 처리하기 때문이다.
+     * @EnableWebSecurity 내부에 @HttpSecurityConfiguration가 존재하며, SecurityFilterAutoConfiguration를 로드하고 FilterChainProxy 클래스인
+     * springSecurityFilterChain를 등록한다. 이후 Delegate를 통해 springSecurityFilterChain가 필터로 동작한다.
+     *
+     *
+     *
+     *  용어
+     * 인증(Authentication) : 요청한 사람이 본인인지 확인하는 절차 :: UserDetailsService를 이용
      * 인가(Authorization) : 인증된 사용자가 접근한 자원에 권한이 있는지 확인하는 절차
      *
      *
@@ -72,7 +80,7 @@ public class Config {
                         }
                 )
 
-                .sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) //JWT 사용으로 stateless여도 상관이 없다.
 
                 .authorizeHttpRequests() // /api/user/* 는 모두 허용
                 .antMatchers("/api/v1/user/sign/in").permitAll()

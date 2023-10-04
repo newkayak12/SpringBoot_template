@@ -33,12 +33,11 @@ public class JwtFilter extends GenericFilterBean {
 
 
         if (
-                !httpServletRequest.getServletPath().startsWith("/api/v1/user/") &&
+                !httpServletRequest.getServletPath().startsWith("/api/v1/user/") && //해당 URL만 filter에서 무시하도록 SecurityConfig에서 설정할 수 있는 방법이 있으면 필요없...
                 StringUtils.hasText(jwt) &&
                 tokenProvider.validateToken(jwt)
         ) {
             Authentication authentication = tokenProvider.getAuthentication(jwt);
-            System.out.println("AUTH " + authentication);
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 
