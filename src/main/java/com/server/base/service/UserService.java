@@ -1,5 +1,6 @@
 package com.server.base.service;
 
+import com.server.base.components.base.BaseService;
 import com.server.base.components.configure.security.jwt.TokenProvider;
 import com.server.base.components.constants.Constants;
 import com.server.base.components.exceptions.BecauseOf;
@@ -32,21 +33,11 @@ import java.util.Optional;
 @Slf4j
 @RequiredArgsConstructor
 @Transactional(rollbackFor = Exception.class)
-public class UserService implements UserDetailsService {
+public class UserService extends BaseService implements UserDetailsService{
     private final UserRepository repository;
-    private final ModelMapper mapper;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
-
     private final TokenProvider tokenProvider;
 
 
-    private Boolean isPasswordMatched(String rawPassword, String encryptedPassword) {
-        return bCryptPasswordEncoder.matches(rawPassword, encryptedPassword);
-    }
-
-    private void encryptPassword(AccountDto accountDto){
-        accountDto.setUserPwd(bCryptPasswordEncoder.encode(accountDto.getUserPwd()));
-    }
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
@@ -59,15 +50,12 @@ public class UserService implements UserDetailsService {
         AccountDto dto = repository.signIn(signInRequest).orElseThrow(() -> new CommonException(BecauseOf.ACCOUNT_NOT_EXIST));
         if(!this.isPasswordMatched(signInRequest.getUserPwd(), dto.getUserPwd())) throw new CommonException(BecauseOf.PASSWORD_NOT_MATCHED);
 
-
         Authentication authentication = new UsernamePasswordAuthenticationToken(dto, null);
         String token = tokenProvider.createToken(authentication);
         response.addHeader(Constants.AUTHORIZATION, token);
 
         return dto;
     }
-
-
     public AccountDto signUp(SignUpRequest signUpRequest, HttpServletResponse response) throws CommonException {
         if(Objects.nonNull(signUpRequest.getUserNo())) throw new CommonException(BecauseOf.ALREADY_EXIST_ACCOUNT);
 

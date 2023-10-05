@@ -33,6 +33,8 @@ public class TokenProvider implements InitializingBean {
     private String BEARER_PREFIX = "Bearer ";
     private final ModelMapper mapper;
 
+    private final Long EXPIRE_TIME = 1000L * 60L * 60L * 24L;
+
     //기존 TokenManager와 비슷하다.
 
     @Override
@@ -46,6 +48,7 @@ public class TokenProvider implements InitializingBean {
                 .setIssuer(Constants.PROJECT_NAME)
                 .claim(BODY, authentication.getPrincipal())
                 .signWith(key, SignatureAlgorithm.HS512)
+                .setExpiration(new Date(System.currentTimeMillis() + EXPIRE_TIME))
                 .compact();
     }
 
@@ -64,9 +67,17 @@ public class TokenProvider implements InitializingBean {
     public boolean validateToken( String token ) {
          Claims claims = Jwts.parserBuilder()
                  .setSigningKey(key).build()
-                 .parseClaimsJws(token).getBody();
+                 .parseClaimsJws(token)
+                 .getBody();
+
+         Date expDate = claims.getExpiration();
          AccountDto authorities = mapper.map(claims.get(BODY), AccountDto.class);
          String issuer = claims.getIssuer();
+
+        return !authorities.isInValid() && issuer.equals(Constants.PROJECT_NAME) && (new Date().after(expDate));
+    }
+
+    public boolean validateRefreshToken(String refresh) {
         return true;
     }
 
@@ -119,4 +130,6 @@ public class TokenProvider implements InitializingBean {
                 .map(String::valueOf)
                 .collect(Collectors.joining());
     }
+
+
 }

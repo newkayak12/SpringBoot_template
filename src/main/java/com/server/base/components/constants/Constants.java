@@ -14,6 +14,7 @@ public class Constants {
     public static String EMAIL_KEY;
 
     public static String AUTHORIZATION = "Authorization";
+    public static String REFRESH_TOKEN = "Refresh";
 
     @Value("${constant.salt}")
     public void setSalt(String _SALT) { SALT = _SALT; }

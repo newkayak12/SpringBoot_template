@@ -18,10 +18,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Created on 2023-05-10
@@ -49,6 +46,7 @@ public class AccountDto implements Serializable, UserDetails {
     private LocalDateTime regDate;
     private LocalDateTime lastSignDate;
     private Role role;
+    private String refreshToken;
 
     @QueryProjection
     public AccountDto(Long userNo, String userId, String userPwd, LocalDateTime regDate, LocalDateTime lastSignDate, Role role) {
@@ -63,10 +61,7 @@ public class AccountDto implements Serializable, UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        Collection<GrantedAuthority> authorities = new ArrayList<>();
-
-        authorities.add(new SimpleGrantedAuthority(role.name()));
-        return authorities;
+        return Set.of(new SimpleGrantedAuthority(role.name()));
     }
 
     @Override
@@ -97,5 +92,11 @@ public class AccountDto implements Serializable, UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public Boolean isInValid () {
+        return Objects.isNull(this.userNo) ||
+               Objects.isNull(this.userId) ||
+               Objects.isNull(this.role);
     }
 }

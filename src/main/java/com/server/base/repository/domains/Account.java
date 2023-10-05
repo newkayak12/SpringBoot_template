@@ -49,12 +49,13 @@ public class Account implements Serializable {
     @Enumerated(value = EnumType.STRING)
     private Role role;
 
+    @Column(name = "refreshToken", columnDefinition = "VARCHAR(1024)")
+    private String refreshToken;
 
     @PostLoad
     public void renewSignDate(){
         this.lastSignDate = LocalDateTime.now();
     }
-
     @PrePersist
     public void signUpDate() {
         this.regDate = LocalDateTime.now();
