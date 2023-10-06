@@ -2,6 +2,7 @@ package com.server.base.components.configure.security.jwt;
 
 import com.server.base.components.configure.ConfigMsg;
 import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.IncorrectClaimException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -29,8 +30,7 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
     }
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
-        System.out.println("SECU" + SecurityContextHolder.getContext().getAuthentication());
-        resolver.resolveException(request, response, null, new ExpiredJwtException(null, null, authException.getMessage(), authException.getCause()));
+        resolver.resolveException(request, response, null, new IncorrectClaimException(null, null, authException.getMessage(), authException.getCause()));
     }
 
     @PostConstruct

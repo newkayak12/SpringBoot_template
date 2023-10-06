@@ -3,6 +3,8 @@ package com.server.base.components.constants;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component(value = "constants")
 public class Constants {
 
@@ -16,6 +18,7 @@ public class Constants {
     public static String AUTHORIZATION = "Authorization";
     public static String REFRESH_TOKEN = "Refresh";
 
+
     @Value("${constant.salt}")
     public void setSalt(String _SALT) { SALT = _SALT; }
     @Value("${constant.token_name}")
@@ -27,4 +30,5 @@ public class Constants {
     public void setEmail(String _EMAIL) { EMAIL = _EMAIL; }
     @Value("${constant.email_key}")
     public void setEmailKey(String _EMAIL_KEY) { EMAIL_KEY = _EMAIL_KEY; }
+
 }

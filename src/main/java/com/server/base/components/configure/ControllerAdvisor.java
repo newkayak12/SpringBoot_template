@@ -2,6 +2,7 @@ package com.server.base.components.configure;
 
 import com.server.base.components.exceptions.CommonException;
 import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.IncorrectClaimException;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.UnsupportedJwtException;
 import io.jsonwebtoken.security.SignatureException;
@@ -38,10 +39,17 @@ public class ControllerAdvisor{
     }
 
     @ResponseStatus(value = HttpStatus.UNAUTHORIZED)
-    @ExceptionHandler(value = {ExpiredJwtException.class})
+    @ExceptionHandler(value = {IncorrectClaimException.class})
     public ResponseEntity invalidTokenExceptionHandler(Exception e) {
         e.printStackTrace();
-        return new ResponseEntity("접근 권한이 없습니다.", HttpStatus.UNAUTHORIZED);
+        return new ResponseEntity(e.getMessage(), HttpStatus.UNAUTHORIZED);
+    }
+
+    @ResponseStatus(value = HttpStatus.NOT_ACCEPTABLE)
+    @ExceptionHandler(value = {ExpiredJwtException.class})
+    public ResponseEntity expiredTokenExceptionHandler(Exception e) {
+        e.printStackTrace();
+        return new ResponseEntity(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
     }
 
 

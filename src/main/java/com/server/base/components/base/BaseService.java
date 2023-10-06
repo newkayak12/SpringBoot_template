@@ -9,7 +9,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class BaseService {
     @Autowired
     private  BCryptPasswordEncoder bCryptPasswordEncoder;

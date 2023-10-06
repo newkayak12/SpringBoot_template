@@ -30,20 +30,15 @@ public class JwtFilter extends GenericFilterBean {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         String jwt = this.resolveToken(httpServletRequest);
-        String refresh = this.resolveRefreshToken(httpServletRequest);
 
-
-        if (
-                !httpServletRequest.getServletPath().startsWith("/api/v1/user/") && //해당 URL만 filter에서 무시하도록 SecurityConfig에서 설정할 수 있는 방법이 있으면 필요없...
-                StringUtils.hasText(jwt) &&
-                (tokenProvider.validateToken(jwt) || tokenProvider.validateRefreshToken(refresh) )
-        ) {
+        if ( StringUtils.hasText(jwt) &&    tokenProvider.validateToken(jwt) ) {
             Authentication authentication = tokenProvider.getAuthentication(jwt);
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 
         chain.doFilter(request, response);
     }
+
 
 
     private String resolveToken( HttpServletRequest request ) {

@@ -4,27 +4,29 @@ import com.server.base.components.configure.ConfigMsg;
 import com.server.base.components.configure.security.jwt.JwtAccessDenialHandler;
 import com.server.base.components.configure.security.jwt.JwtAuthenticationEntryPoint;
 import com.server.base.components.configure.security.jwt.JwtSecurityConfig;
+import com.server.base.components.configure.security.byPass.ByPass;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.context.annotation.*;
+import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
 import javax.annotation.PostConstruct;
 
 
-@EnableWebSecurity(debug = true)
+@EnableWebSecurity(debug = true )
 @Configuration(value = "security_configuration")
-@DependsOn(value = {"JwtAuthenticationEntryPoint", "JwtAccessDeniedHandler", "JwtSecurityConfig"} )
+@DependsOn(value = {"JwtAuthenticationEntryPoint", "JwtAccessDeniedHandler", "JwtSecurityConfig", "security_properties"} )
 @RequiredArgsConstructor
 public class Config {
     private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
     private final JwtAccessDenialHandler jwtAccessDeniedHandler;
     private final JwtSecurityConfig jwtSecurityConfig;
-
+    private final ByPass byPass;
 
     /**
      *  동작
@@ -67,6 +69,11 @@ public class Config {
      *
      */
 
+
+    @Bean
+    public WebSecurityCustomizer configure() {
+        return web -> web.ignoring().mvcMatchers( byPass.ignoreSecurityPath() );
+    }
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
        return   httpSecurity
@@ -82,8 +89,8 @@ public class Config {
 
                 .sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) //JWT 사용으로 stateless여도 상관이 없다.
 
-                .authorizeHttpRequests() // /api/user/* 는 모두 허용
-                .antMatchers("/api/v1/user/sign/in").permitAll()
+                .authorizeHttpRequests()
+                .antMatchers(byPass.ignoreSecurityPath()).permitAll()
                 .anyRequest().authenticated() //이외는 허용하지 않음
                 .and()
 

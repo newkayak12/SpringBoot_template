@@ -74,7 +74,11 @@ public class TokenProvider implements InitializingBean {
          AccountDto authorities = mapper.map(claims.get(BODY), AccountDto.class);
          String issuer = claims.getIssuer();
 
-        return !authorities.isInValid() && issuer.equals(Constants.PROJECT_NAME) && (new Date().after(expDate));
+
+         if(!new Date().after(expDate)) throw new ExpiredJwtException(null, claims, "access token has benn expired");
+         if(authorities.isInValid() || issuer.equals(Constants.PROJECT_NAME)) throw new IncorrectClaimException(null, claims, "access token has benn expired");
+
+        return true;
     }
 
     public boolean validateRefreshToken(String refresh) {

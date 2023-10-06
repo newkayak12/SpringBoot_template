@@ -26,6 +26,8 @@ import javax.validation.Valid;
 public class UserController {
     private final UserService service;
 
+
+
     @GetMapping(value = "/sign/in")
     public ResponseEntity<AccountDto> signIn(@ModelAttribute @Valid @Validated(value = {AccountValid.SignIn.class})
                                              SignInRequest signInRequest, HttpServletResponse response) throws CommonException {
