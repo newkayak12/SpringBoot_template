@@ -73,6 +73,7 @@ public class Config {
     @Bean
     public WebSecurityCustomizer configure() {
         return web -> web.ignoring().mvcMatchers( byPass.ignoreSecurityPath() );
+        //security 무시할 ByPassPath
     }
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {

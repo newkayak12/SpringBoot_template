@@ -12,6 +12,6 @@ import lombok.Setter;
 @JsonIgnoreProperties(value = {
         "userNo",
         "regDate",
-})
+}, allowGetters = false)
 public class SignInRequest extends AccountDto {
 }

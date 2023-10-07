@@ -1,5 +1,6 @@
 package com.server.base.components.configure.security.jwt;
 
+import com.server.base.components.configure.security.duration.TokenDuration;
 import com.server.base.components.constants.Constants;
 import com.server.base.repository.dto.reference.AccountDto;
 import io.jsonwebtoken.*;
@@ -8,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -24,16 +26,16 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @Component(value = "TokenProvider")
-@DependsOn(value = {"constants"})
+@DependsOn(value = {"constants", "security_token_properties"})
 @Slf4j
 @RequiredArgsConstructor
 public class TokenProvider implements InitializingBean {
     private Key key;
-    private String BODY = "BODY";
-    private String BEARER_PREFIX = "Bearer ";
+    private final String BODY = "BODY";
+    private final String BEARER_PREFIX = "Bearer ";
+    private final String TIMESTAMP = "TIMESTAMP";
     private final ModelMapper mapper;
-
-    private final Long EXPIRE_TIME = 1000L * 60L * 60L * 24L;
+    private final TokenDuration tokenDuration;
 
     //기존 TokenManager와 비슷하다.
 
@@ -44,11 +46,21 @@ public class TokenProvider implements InitializingBean {
 
     public String createToken(Authentication authentication) {
         return BEARER_PREFIX + Jwts.builder()
-                .setSubject(authentication.getName())
+                .setSubject(Constants.AUTHORIZATION)
                 .setIssuer(Constants.PROJECT_NAME)
                 .claim(BODY, authentication.getPrincipal())
                 .signWith(key, SignatureAlgorithm.HS512)
-                .setExpiration(new Date(System.currentTimeMillis() + EXPIRE_TIME))
+                .setExpiration(new Date(System.currentTimeMillis() + tokenDuration.getExpireTime()))
+                .compact();
+    }
+
+    public String createRefreshToken(Authentication authentication) {
+        return BEARER_PREFIX + Jwts.builder()
+                .setSubject(Constants.REFRESH_TOKEN)
+                .setIssuer(Constants.PROJECT_NAME)
+                .claim(BODY, authentication.getPrincipal())
+                .claim(TIMESTAMP, System.currentTimeMillis())
+                .signWith(key, SignatureAlgorithm.HS512)
                 .compact();
     }
 

@@ -12,10 +12,7 @@ import java.util.List;
 public class ByPass {
     public List<String> ignorePath;
 
-
     public String[] ignoreSecurityPath(){
-
-
         return ignorePath.stream().toArray(String[]::new);
     }
 }
