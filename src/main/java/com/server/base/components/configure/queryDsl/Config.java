@@ -15,7 +15,6 @@ import javax.persistence.PersistenceContext;
  * Project user-service
  */
 @Configuration(value = "querydsl_configuration")
-//@RequiredArgsConstructor
 public class Config {
 
     @PostConstruct

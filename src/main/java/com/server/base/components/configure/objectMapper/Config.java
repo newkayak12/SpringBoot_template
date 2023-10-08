@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
 import javax.annotation.PostConstruct;
 
 @Configuration(value = "objectMapper_configuration")
-//@Component
 @RequiredArgsConstructor
 public class Config {
     private  ObjectMapper objectMapper;

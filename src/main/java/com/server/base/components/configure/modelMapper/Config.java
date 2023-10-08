@@ -15,7 +15,7 @@ public class Config {
     public void enabled(){
         ConfigMsg.msg("ModelMapper");
     }
-    private ModelMapper modelMapper = new ModelMapper();
+    private ModelMapper modelMapper;
 
     private void strictStrategy() {
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
@@ -28,6 +28,7 @@ public class Config {
 
     @Bean
     public ModelMapper modelMapper() {
+        modelMapper = new ModelMapper();
         this.strictStrategy();
         this.useReflection();
         return modelMapper;
