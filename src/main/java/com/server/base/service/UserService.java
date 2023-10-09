@@ -34,10 +34,10 @@ public class UserService extends BaseService implements UserDetailsService{
 
 
     @Override
-    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         SignInRequest signInRequest = new SignInRequest();
-        signInRequest.setUserId(userName);
-        return repository.signIn(signInRequest).orElseThrow(() -> new UsernameNotFoundException(userName));
+        signInRequest.setUserId(username);
+        return repository.signIn(signInRequest).orElseThrow(() -> new UsernameNotFoundException(username));
     }
     public AccountDto refreshAccessToken(SignInRequest signInRequest, HttpServletResponse response) throws CommonException {
         AccountDto dto = repository.signIn(signInRequest).orElseThrow(() -> new CommonException(BecauseOf.ACCOUNT_NOT_EXIST));

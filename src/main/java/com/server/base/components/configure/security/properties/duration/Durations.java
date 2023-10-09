@@ -1,4 +1,4 @@
-package com.server.base.components.configure.security.duration;
+package com.server.base.components.configure.security.properties.duration;
 
 import lombok.Getter;
 

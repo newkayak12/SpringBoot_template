@@ -60,6 +60,4 @@ public class Account implements Serializable {
     public void signUpDate() {
         this.regDate = LocalDateTime.now();
     }
-
-
 }

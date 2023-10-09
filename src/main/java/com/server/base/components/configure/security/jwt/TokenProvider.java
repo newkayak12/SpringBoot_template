@@ -1,6 +1,6 @@
 package com.server.base.components.configure.security.jwt;
 
-import com.server.base.components.configure.security.duration.TokenDuration;
+import com.server.base.components.configure.security.properties.duration.TokenDuration;
 import com.server.base.components.constants.Constants;
 import com.server.base.repository.dto.reference.AccountDto;
 import io.jsonwebtoken.*;
@@ -9,7 +9,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

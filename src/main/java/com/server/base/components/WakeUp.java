@@ -19,7 +19,6 @@ public class WakeUp {
 
     @EventListener(value = {ApplicationReadyEvent.class})
     public void message(){
-
         log.warn("{} is ready", repository.wakeUpMsg("bases"));
     }
 }

@@ -1,4 +1,4 @@
-package com.server.base.components.configure.security.byPass;
+package com.server.base.components.configure.security.properties.byPass;
 
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;

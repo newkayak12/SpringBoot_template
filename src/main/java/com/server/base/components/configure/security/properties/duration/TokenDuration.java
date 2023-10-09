@@ -1,6 +1,5 @@
-package com.server.base.components.configure.security.duration;
+package com.server.base.components.configure.security.properties.duration;
 
-import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
