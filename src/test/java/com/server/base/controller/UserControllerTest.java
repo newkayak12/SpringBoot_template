@@ -52,7 +52,7 @@ public class UserControllerTest extends AbstractControllerTest {
                                     .param("userPwd", "1212")
                     )
                     .andExpect(status().isOk())
-                    .andExpect(header().exists(Constants.TOKEN_NAME))
+                    .andExpect(header().exists(Constants.AUTHORIZATION))
                     .andDo(print());
 
         }
