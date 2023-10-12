@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 @ExtendWith(MockitoExtension.class)
 @EnableConfigurationProperties
-public class AbstractServiceTest {
+public abstract class AbstractServiceTest {
     @Spy
     protected ModelMapper mapper;
 

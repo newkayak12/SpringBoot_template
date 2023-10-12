@@ -7,6 +7,7 @@ import com.server.base.components.exceptions.CommonException;
 import com.server.base.repository.dto.reference.AccountDto;
 import com.server.base.repository.dto.request.SignInRequest;
 import com.server.base.repository.userRepository.UserRepository;
+import com.server.base.util.AbstractRepositoryTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -21,17 +22,7 @@ import javax.persistence.EntityManager;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-@DataJpaTest(bootstrapMode = BootstrapMode.DEFAULT, showSql = true)
-@Import(Config.class)
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-//@ComponentScan(includeFilters = {
-//        @ComponentScan.Filter(
-//                type = FilterType.ANNOTATION,
-//                classes = {Configuration.class, Repository.class}
-//        )
-//})
-@Profile("local")
-public class UserRepositoryTest {
+public class UserRgepositoryTest extends AbstractRepositoryTest {
 
     @Autowired
     private UserRepository repository;
