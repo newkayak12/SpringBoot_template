@@ -7,6 +7,9 @@ import com.server.base.repository.domains.Account;
 import com.querydsl.jpa.JPQLQueryFactory;
 import com.server.base.repository.dto.reference.AccountDto;
 import com.server.base.repository.dto.request.SignInRequest;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
@@ -20,8 +23,9 @@ import org.springframework.util.StringUtils;
 public class UserRepositoryImpl extends QuerydslRepositorySupport implements UserRepositoryCustom {
     private JPQLQueryFactory query;
 
+
     @Autowired
-    public UserRepositoryImpl(JPQLQueryFactory query) {
+    public UserRepositoryImpl( JPQLQueryFactory query) {
         super(Account.class);
         this.query = query;
     }
@@ -61,7 +65,6 @@ public class UserRepositoryImpl extends QuerydslRepositorySupport implements Use
                             this.eqUserNo(signInRequest.getUserNo()),
                             this.eqRefreshToken(signInRequest.getRefreshToken())
                         )
-
                         .fetchOne()
         );
 

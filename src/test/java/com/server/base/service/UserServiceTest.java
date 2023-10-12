@@ -1,5 +1,6 @@
 package com.server.base.service;
 
+import com.server.base.components.configure.security.jwt.TokenProvider;
 import com.server.base.components.constants.Constants;
 import com.server.base.components.exceptions.BecauseOf;
 import com.server.base.components.exceptions.CommonException;
@@ -8,6 +9,7 @@ import com.server.base.repository.dto.reference.AccountDto;
 import com.server.base.repository.dto.request.SignInRequest;
 import com.server.base.repository.dto.request.SignUpRequest;
 import com.server.base.repository.userRepository.UserRepository;
+import com.server.base.util.AbstractServiceTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -37,48 +39,20 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.*;
 
-@ExtendWith(MockitoExtension.class)
-@EnableConfigurationProperties
-public class UserServiceTest {
+public class UserServiceTest extends AbstractServiceTest {
     @InjectMocks
     private UserService service;
-
     @Mock
     private UserRepository repository;
-    @Spy
-    private ModelMapper mapper;
     @Mock
     private HttpServletResponse response;
-    @Spy
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Mock
     private TokenControl control;
 
-    @BeforeEach
-    public void setProperties() {
-        Constants constants = new Constants();
-        try {
-            List<Method> methods = Arrays.stream(Constants.class.getMethods())
-                    .filter(method -> Arrays.stream(method.getAnnotations())
-                                            .anyMatch(annotation -> annotation.annotationType().equals(Value.class))
-                    )
-                    .collect(Collectors.toList());
+    @Mock
+    private TokenProvider tokenProvider;
 
-            for ( Method method : methods ) {
-                ReflectionUtils.invokeMethod(method, constants, "test");
-            }
-        } catch ( Exception e ){
-            e.printStackTrace();
-        }
 
-    }
-
-    @BeforeEach
-    public void setModelMapperSet () {
-        this.mapper.getConfiguration()
-                .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE)
-                .setFieldMatchingEnabled(true);
-    }
 
 
     @Nested
@@ -105,10 +79,10 @@ public class UserServiceTest {
             request.setUserPwd("1212");
 
             //when
-//            when(repository.signIn(request)).thenReturn(this.accountDto);
-//            when(ticketRepository.ticketInfoByUserNo(anyLong(), any())).thenReturn(null);
+            when(repository.signIn(request)).thenReturn(Optional.ofNullable(this.accountDto));
             when(bCryptPasswordEncoder.matches(anyString(), anyString())).thenReturn(true);
-            when(control.encrypt(any(AccountDto.class))).thenReturn(anyString());
+//            when(control.encrypt(any(AccountDto.class))).thenReturn(anyString());
+            when(tokenProvider.createToken(any())).thenReturn(anyString());
 
             //then
             assertThat(service.signIn(request, response))
@@ -126,7 +100,7 @@ public class UserServiceTest {
             request.setUserPwd("1213");
 
             //when
-            when(repository.signIn(request)).thenReturn(null);
+            when(repository.signIn(request)).thenReturn(Optional.empty());
 
             //then
             assertThatThrownBy(() -> service.signIn(request, response))
@@ -143,8 +117,9 @@ public class UserServiceTest {
             request.setUserPwd("1213");
 
             //when
-//            when(repository.signIn(request)).thenReturn(this.accountDto);
+            when(repository.signIn(request)).thenReturn(Optional.ofNullable(this.accountDto));
             when(bCryptPasswordEncoder.matches(anyString(), anyString())).thenReturn(false);
+//            when(tokenProvider.createToken(any())).thenReturn(anyString());
 
             //then
             assertThatThrownBy(() -> service.signIn(request, response))
