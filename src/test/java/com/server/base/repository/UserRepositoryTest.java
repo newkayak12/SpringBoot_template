@@ -22,7 +22,7 @@ import javax.persistence.EntityManager;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-public class UserRgepositoryTest extends AbstractRepositoryTest {
+public class UserRepositoryTest extends AbstractRepositoryTest {
 
     @Autowired
     private UserRepository repository;
