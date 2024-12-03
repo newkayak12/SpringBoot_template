@@ -1,5 +1,0 @@
-ticketNo,name,type,watchableSimultaneously,maximumResolution,isSupportHDR,savableCount,price,isActive
-84,"BASIC","BASIC",1,HD,false,10,9900,true
-85,"ADVERTISE_STANDARD","ADVERTISE_STANDARD",1,HD,false,10,4500,true
-86,"STANDARD","STANDARD",4,FHD,false,100,11000,true
-87,"PREMIUM","PREMIUM",4,UHD,true,999,13000,true

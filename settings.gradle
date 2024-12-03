@@ -1,1 +1,5 @@
 rootProject.name = 'base'
+include 'presentation-layer'
+include 'business-layer'
+include 'persistence-layer'
+
