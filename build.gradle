@@ -60,3 +60,12 @@ project(':presentation-layer') {
     apply plugin: 'org.asciidoctor.jvm.convert'
 }
 
+
+project(':persistence-layer') {
+    bootJar { enabled = false } // core 은 bootJar 로 패키징 할 필요 없음
+    jar { enabled = true }
+    ext {
+        querydsl_version="5.0.0"
+    }
+}
+
