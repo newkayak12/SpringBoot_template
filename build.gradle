@@ -1,23 +1,10 @@
-
-buildscript {
-    ext {
-        queryDslVersion = "5.0.0"
-    }
-}
-
-
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.11'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
-    id "org.asciidoctor.jvm.convert" version "3.3.2"  // (1)
+    id 'org.springframework.boot' version '3.3.6'
+    id 'io.spring.dependency-management' version '1.1.6'
+    id "org.asciidoctor.jvm.convert" version "3.3.2"
 }
 
-
-group = 'base'
-version = '1.0.0'
-sourceCompatibility = '11'
 
 configurations {
     compileOnly {
@@ -25,135 +12,51 @@ configurations {
     }
 }
 
-configurations {
-    asciidoctorExt // (2)
+allprojects {
+    group = 'com.base'
+    version = '1.0.0'
+    sourceCompatibility = '21'
+
+    repositories {
+        mavenCentral()
+    }
+
+
 }
 
 
-repositories {
-    mavenCentral()
-    mavenLocal()
-    maven { url 'https://jitpack.io' }
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    }
 }
-
-ext {
-    set('springCloudVersion', "2021.0.7")
-    snippetsDir = file('build/generated-snippets') // (5)
-}
-
-dependencies {
-//    implementation("org.newkayak:fileUpload:1.0.2")
-
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-
-//Test
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.security:spring-security-test'
-    testImplementation 'org.mockito:mockito-inline'
-    testImplementation 'org.assertj:assertj-core:3.23.1'
-//asciidoctor
-    asciidoctorExt 'org.springframework.restdocs:spring-restdocs-asciidoctor' // (3)
-    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc' // (4)
-
-//swagger
-//    implementation "io.springfox:springfox-boot-starter:3.0.0"
-//    implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.2'
-    implementation("org.springdoc:springdoc-openapi-ui:1.6.11")
-//SpringBoot Starter
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.cloud:spring-cloud-starter'
-    implementation 'org.springframework.cloud:spring-cloud-starter-config'
-    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-mail'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework.security:spring-security-crypto'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-
-
-
-//Hibernate & QueryDSL
-    implementation 'com.querydsl:querydsl-core'
-    implementation 'org.mariadb.jdbc:mariadb-java-client'
-    implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
-    annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}"
-
-//ModelMapper
-    implementation 'org.modelmapper:modelmapper:3.1.1'
-
-//DateTime jackson.datatype.binder
-    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
-
-//    TOKEN
-    implementation 'com.github.newkayak12:Dependency-Token:1.0.6'
-    implementation 'com.github.newkayak12:Dependency-EmailSender:1.0.1'
-
-    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
-    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
-    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.5'
-    runtimeOnly 'com.h2database:h2'
-}
-
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
     }
 }
-
 
 tasks.named('test') {
     useJUnitPlatform()
-    outputs.dir snippetsDir // (6)
-}
-
-asciidoctor {
-    configurations 'asciidoctorExt' // (7)
-    baseDirFollowsSourceFile() // (8)
-    inputs.dir snippetsDir // (9)
-    dependsOn test // (10)
-}
-
-asciidoctor.doFirst {
-    delete file('src/main/resources/static/docs')  // (11)
-}
-
-task copyDocument(type: Copy) { // (12)
-    dependsOn asciidoctor
-    from file("build/docs/asciidoc")
-    into file("src/main/resources/static/docs")
-}
-
-build {
-    dependsOn copyDocument
 }
 
 
 
-
-
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-    querydsl.extendsFrom compileClasspath
+project(':presentation-layer') {
+    bootJar { enabled = false } // core 은 bootJar 로 패키징 할 필요 없음
+    jar { enabled = true }
+    apply plugin: 'org.asciidoctor.jvm.convert'
 }
 
-// querydsl 세팅 시작
-def querydslDir = "$buildDir/generated/querydsl"
-querydsl {
-    jpa = true
-    querydslSourcesDir = querydslDir
-}
-sourceSets {
-    main.java.srcDir querydslDir
-}
-configurations {
-    querydsl.extendsFrom compileClasspath
-}
-compileQuerydsl {
-    options.annotationProcessorPath = configurations.querydsl
-}
-// querydsl 세팅 끝
