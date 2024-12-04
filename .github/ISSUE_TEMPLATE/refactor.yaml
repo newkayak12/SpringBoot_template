@@ -1,5 +1,5 @@
 name: "🛠️ Refactor"
-description: "새로운 기능 추가"
+description: "기존 기능 수정"
 labels: ["refactor"]
 body:
     - type: textarea
