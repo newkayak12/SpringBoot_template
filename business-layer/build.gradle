@@ -1,5 +1,11 @@
 dependencies {
  implementation(project(":persistence-layer"))
+ implementation(project(":common-layer"))
+}
+
+dependencies {
+ testImplementation(project(":common-layer"))
+
 }
 
 test {
