@@ -78,4 +78,6 @@ project(':persistence-layer') {
 project(':common-layer') {
     bootJar { enabled = false }
     jar { enabled = true }
+
+
 }
