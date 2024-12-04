@@ -38,6 +38,8 @@ subprojects {
         annotationProcessor 'org.projectlombok:lombok'
 
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        implementation 'com.navercorp.fixturemonkey:fixture-monkey:1.1.4'
+        testImplementation 'org.mockito:mockito-core:5.14.2'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     }
 }
@@ -55,18 +57,25 @@ tasks.named('test') {
 
 
 project(':presentation-layer') {
-    bootJar { enabled = false } // core 은 bootJar 로 패키징 할 필요 없음
+    bootJar { enabled = false }
     jar { enabled = true }
     apply plugin: 'org.asciidoctor.jvm.convert'
-
 }
 
+project(':business-layer') {
+    bootJar { enabled = false }
+    jar { enabled = true }
+}
 
 project(':persistence-layer') {
-    bootJar { enabled = false } // core 은 bootJar 로 패키징 할 필요 없음
+    bootJar { enabled = false }
     jar { enabled = true }
     ext {
         querydsl_version="5.0.0"
     }
 }
 
+project(':common-layer') {
+    bootJar { enabled = false }
+    jar { enabled = true }
+}
