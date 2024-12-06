@@ -13,6 +13,7 @@ dependencies {
 dependencies {
     asciidoctorExt 'org.springframework.restdocs:spring-restdocs-asciidoctor'
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
     testImplementation(project(":business-layer"))
     testImplementation(project(":common-layer"))
 }
