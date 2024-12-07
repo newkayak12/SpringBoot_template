@@ -4,7 +4,7 @@ spring:
             - 'classpath:datasource-temporary.yaml'
 springdoc:
     swagger-ui:
-        path: /swagger.html
+        path: /swagger-ui/index.html
         tags-sorter: alpha
         disable-swagger-default-url: true
         display-request-duration: true
