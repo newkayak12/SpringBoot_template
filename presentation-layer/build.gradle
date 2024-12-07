@@ -13,6 +13,8 @@ dependencies {
 dependencies {
     asciidoctorExt 'org.springframework.restdocs:spring-restdocs-asciidoctor'
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
+
     testImplementation(project(":business-layer"))
     testImplementation(project(":common-layer"))
 }

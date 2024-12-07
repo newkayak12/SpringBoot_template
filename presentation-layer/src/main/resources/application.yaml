@@ -2,7 +2,7 @@ spring:
     application:
       name: "base"
     profiles:
-        include:
+        active:
             - temporary
             - local
             - stage
