@@ -1,6 +1,6 @@
 dependencies {
-    implementation(project(":common-layer"))
-//    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 
     implementation "com.querydsl:querydsl-jpa:${querydsl_version}:jakarta"
@@ -16,8 +16,10 @@ dependencies {
 }
 
 dependencies {
+    implementation implementation(project(':utility-layer',))
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
     runtimeOnly 'com.h2database:h2'
-    testImplementation(project(":common-layer"))
+    testImplementation testImplementation(project(':utility-layer',))
 }
 
 test {
