@@ -1,11 +1,10 @@
 dependencies {
- implementation(project(":persistence-layer"))
- implementation(project(":common-layer"))
+    implementation(project(":persistence-layer"))
 }
 
 dependencies {
- testImplementation(project(":common-layer"))
-
+ implementation implementation(project(':utility-layer',))
+    testImplementation testImplementation(project(':utility-layer',))
 }
 
 test {
