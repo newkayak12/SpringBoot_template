@@ -2,7 +2,9 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.3.6'
     id 'io.spring.dependency-management' version '1.1.6'
-    id "org.asciidoctor.jvm.convert" version "3.3.2"
+    id "org.asciidoctor.jvm.convert" version "3.3.2" apply false
+    id "com.epages.restdocs-api-spec" version "0.19.4" apply false
+    id "org.hidetake.swagger.generator" version "2.18.2" apply false
 }
 
 
@@ -20,10 +22,7 @@ allprojects {
     repositories {
         mavenCentral()
     }
-
-
 }
-
 
 
 subprojects {
@@ -38,7 +37,8 @@ subprojects {
         annotationProcessor 'org.projectlombok:lombok'
 
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
-        implementation 'com.navercorp.fixturemonkey:fixture-monkey:1.1.4'
+        implementation 'com.navercorp.fixturemonkey:fixture-monkey:1.1.8'
+        testImplementation 'com.navercorp.fixturemonkey:fixture-monkey-jakarta-validation:1.1.5'
         testImplementation 'org.mockito:mockito-core:5.14.2'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     }
@@ -55,11 +55,12 @@ tasks.named('test') {
 }
 
 
-
 project(':presentation-layer') {
     bootJar { enabled = false }
     jar { enabled = true }
     apply plugin: 'org.asciidoctor.jvm.convert'
+    apply plugin: 'com.epages.restdocs-api-spec'
+    apply plugin: 'org.hidetake.swagger.generator'
 }
 
 project(':business-layer') {
@@ -71,13 +72,11 @@ project(':persistence-layer') {
     bootJar { enabled = false }
     jar { enabled = true }
     ext {
-        querydsl_version="5.0.0"
+        querydsl_version = "5.1.0"
     }
 }
 
-project(':common-layer') {
+project(':utility-layer') {
     bootJar { enabled = false }
     jar { enabled = true }
-
-
 }

@@ -3,5 +3,6 @@ rootProject.name = 'base'
 include 'presentation-layer'
 include 'business-layer'
 include 'persistence-layer'
-include 'common-layer'
+include 'utility-layer'
+include 'auth-module'
 

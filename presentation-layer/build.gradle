@@ -6,17 +6,23 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation(project(":business-layer"))
-    implementation(project(":common-layer"))
+    implementation testImplementation(project(":business-layer"))
+    implementation testImplementation(project(':utility-layer',))
 }
 
 dependencies {
-    asciidoctorExt 'org.springframework.restdocs:spring-restdocs-asciidoctor'
-    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
 
-    testImplementation(project(":business-layer"))
-    testImplementation(project(":common-layer"))
+
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+
+    testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
+    asciidoctorExt("org.springframework.restdocs:spring-restdocs-asciidoctor")
+    testImplementation("com.epages:restdocs-api-spec-mockmvc:0.19.4")
+
+
+
+
 }
 
 test {
@@ -32,23 +38,72 @@ tasks.named('test') {
     outputs.dir snippetsDir
 }
 
-asciidoctor {
-    configurations 'asciidoctorExt'
-    baseDirFollowsSourceFile()
-    inputs.dir snippetsDir
-    dependsOn test
+// asciidoctor
+//
+//asciidoctor {
+//    configurations 'asciidoctorExt'
+//    baseDirFollowsSourceFile()
+//    inputs.dir snippetsDir
+//    dependsOn test
+//}
+//
+//asciidoctor.doFirst {
+//    delete file('src/main/resources/static/docs')
+//}
+//
+//task copyDocument(type: Copy) {
+//    dependsOn asciidoctor
+//    from file("build/docs/asciidoc")
+//    into file("src/main/resources/static/docs")
+//}
+//
+//build {
+//    dependsOn copyDocument
+//}
+
+
+openapi3 {
+    setServer("http://localhost:8080")
+    title = "Sample"
+    description = "Sample-API"
+    version = "1.0.0"
+    format = "yaml"
+}
+ext {
+    API_SPEC = file("/api-spec/openapi3.yaml")
 }
 
-asciidoctor.doFirst {
-    delete file('src/main/resources/static/docs')
+swaggerSources {
+    sample {
+        setInputFile(API_SPEC)
+    }
 }
 
-task copyDocument(type: Copy) {
-    dependsOn asciidoctor
-    from file("build/docs/asciidoc")
-    into file("src/main/resources/static/docs")
+tasks.register('swagger') {
+    dependsOn('openapi3')
+    doFirst {
+        def swaggerUIFile = file("${openapi3.outputDirectory}/openapi3.yaml")
+
+        def securitySchemesContent =  "  securitySchemes:\n" +
+            "    APIKey:\n" +
+            "      type: apiKey\n" +
+            "      name: Authorization\n" +
+            "      in: header\n" +
+            "security:\n" +
+            "  - APIKey: []  # Apply the security scheme here"
+        swaggerUIFile.append(securitySchemesContent)
+
+        print('Append Security Settings')
+    }
+
+    doLast {
+        copy {
+            from("build/api-spec/openapi3.yaml")
+            into("build/resources/main/static/docs")
+            print('Copy yaml')
+        }
+    }
 }
 
-build {
-    dependsOn copyDocument
-}
+
+
