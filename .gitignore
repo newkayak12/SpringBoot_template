@@ -166,3 +166,8 @@ build/
 *.gz
 *.log
 
+buildOutputCleanup.lock
+checksums.lock
+.idea
+.gradle
+**/generated
