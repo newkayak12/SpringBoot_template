@@ -2,13 +2,11 @@ package com.base.config.jwt;
 
 import com.base.config.properties.jwt.JwtProperties;
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Header;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import java.nio.charset.StandardCharsets;
-import java.security.Key;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
@@ -71,7 +69,7 @@ public class JwtProvider implements AbstractJwtProvider<AuthenticationDetails> {
         Claims claims = this.parse(bearerToken);
         Date expireDate = claims.getExpiration();
         LocalDateTime now = LocalDateTime.now();
-        LocalDateTime expireLocalDateTime = LocalDateTime.from(expireDate.toInstant())
+        LocalDateTime expireLocalDateTime = LocalDateTime.from(expireDate.toInstant());
         return now.isBefore(expireLocalDateTime);
     }
 
