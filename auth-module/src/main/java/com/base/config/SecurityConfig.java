@@ -4,6 +4,8 @@ import com.base.config.jwt.JwtFilter;
 import com.base.config.jwt.JwtProvider;
 import com.base.config.properties.jwt.JwtProperties;
 import com.base.config.properties.jwt.Whitelist;
+import com.base.config.properties.xxs.Blacklist;
+import com.base.config.xss.CrossSiteScriptingFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -21,13 +23,15 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.savedrequest.RequestCacheAwareFilter;
 
 @Configuration
 @EnableWebSecurity
-@EnableConfigurationProperties(value = {Whitelist.class, JwtProperties.class})
+@EnableConfigurationProperties(value = {Whitelist.class, JwtProperties.class, Blacklist.class})
 @RequiredArgsConstructor
 public class SecurityConfig {
     private final Whitelist jwtPath;
+    private final Blacklist xssPath;
     private final AccessDeniedHandler accessDeniedHandler;
     private final AuthenticationEntryPoint entryPoint;
     private final JwtProvider provider;
@@ -62,6 +66,7 @@ public class SecurityConfig {
                                  .anyRequest().authenticated();
             })
             .addFilterBefore(new JwtFilter(provider), UsernamePasswordAuthenticationFilter.class)
+            .addFilterAfter(new CrossSiteScriptingFilter(xssPath), RequestCacheAwareFilter.class)
             .build();
     }
 

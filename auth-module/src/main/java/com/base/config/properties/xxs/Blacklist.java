@@ -1,0 +1,13 @@
+package com.base.config.properties.xxs;
+
+import java.util.List;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties(value = "security.jwt.restricted")
+public record Blacklist(
+    List<String> path
+) {
+    public String[] array(){
+        return path.stream().toArray(String[]::new);
+    }
+}
