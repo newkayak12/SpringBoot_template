@@ -2,9 +2,9 @@ package com.base.sample;
 
 import com.base.sample.dto.ResponseConverter;
 import com.base.sample.dto.SampleQueryResult;
-import com.base.sample.dto.request.InsertRequest;
-import com.base.sample.dto.request.UpdateRequest;
-import com.base.sample.dto.response.SampleResponse;
+import com.base.sample.dto.in.InsertSample;
+import com.base.sample.dto.in.UpdateSample;
+import com.base.sample.dto.out.SampleDto;
 import com.base.sample.entity.Sample;
 import com.base.sample.repository.SampleRepository;
 import java.util.List;
@@ -24,22 +24,22 @@ public class SampleService {
     private final ResponseConverter converter = new ResponseConverter();
 
     @Transactional(readOnly = true, propagation = Propagation.NOT_SUPPORTED)
-    public List<SampleResponse> findAll() {
+    public List<SampleDto> findAll() {
         List<SampleQueryResult> samples = repository.findAll();
         return samples.stream().map(converter::toSampleResponse).collect(Collectors.toUnmodifiableList());
     }
 
     @Transactional
-    public Boolean insert(InsertRequest request) {
+    public Boolean insert(InsertSample request) {
         Sample entity = repository.save(request.toEntity());
         return Objects.nonNull(entity.getSampleId());
     }
 
     @Transactional
-    public Boolean update(Long id, UpdateRequest request) {
+    public Boolean update(UpdateSample request) {
 
         try {
-            Sample entity = repository.findById(id).orElseThrow(IllegalArgumentException::new);
+            Sample entity = repository.findById(request.id()).orElseThrow(IllegalArgumentException::new);
             entity.changeSampleName(request.sampleName());
         }
         catch (DataAccessException e) {

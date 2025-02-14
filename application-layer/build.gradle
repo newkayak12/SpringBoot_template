@@ -1,0 +1,12 @@
+dependencies {
+    implementation(project(":business-layer"))
+}
+
+dependencies {
+ implementation implementation(project(':utility-layer',))
+    testImplementation testImplementation(project(':utility-layer',))
+}
+
+test {
+    useJUnitPlatform()
+}

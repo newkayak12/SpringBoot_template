@@ -63,6 +63,11 @@ project(':presentation-layer') {
     apply plugin: 'org.hidetake.swagger.generator'
 }
 
+project(':application-layer') {
+    bootJar { enabled = false }
+    jar { enabled = true }
+}
+
 project(':business-layer') {
     bootJar { enabled = false }
     jar { enabled = true }

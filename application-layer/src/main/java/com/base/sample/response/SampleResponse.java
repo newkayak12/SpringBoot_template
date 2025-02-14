@@ -1,13 +1,13 @@
-package com.base.sample.dto.response;
+package com.base.sample.response;
 
-import com.base.sample.dto.SampleQueryResult;
+import com.base.sample.dto.out.SampleDto;
 
 public record SampleResponse(
     Long sampleId,
     String sampleName
 ) {
 
-    public static SampleResponse from( SampleQueryResult queryResult) {
+    public static SampleResponse from( SampleDto queryResult) {
         return new SampleResponse(queryResult.sampleId(), queryResult.sampleName());
     }
 }

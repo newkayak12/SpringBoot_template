@@ -1,6 +1,7 @@
 rootProject.name = 'base'
 
 include 'presentation-layer'
+include 'application-layer'
 include 'business-layer'
 include 'persistence-layer'
 include 'utility-layer'

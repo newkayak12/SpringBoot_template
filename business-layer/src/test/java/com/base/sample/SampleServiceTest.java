@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.doReturn;
 
 import com.base.sample.dto.SampleQueryResult;
-import com.base.sample.dto.response.SampleResponse;
+import com.base.sample.dto.out.SampleDto;
 import com.base.sample.repository.SampleRepository;
 import com.navercorp.fixturemonkey.FixtureMonkey;
 import com.navercorp.fixturemonkey.api.introspector.ConstructorPropertiesArbitraryIntrospector;
@@ -57,7 +57,7 @@ public class SampleServiceTest {
 
         //when
         doReturn(mockList).when(repository).findAll();
-        List<SampleResponse> result = service.findAll();
+        List<SampleDto> result = service.findAll();
 
         //then
         assertThat(result).size().isEqualTo(10);

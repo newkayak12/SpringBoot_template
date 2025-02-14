@@ -15,9 +15,9 @@ import com.base.config.URL.Sample;
 import com.base.controller.SampleController;
 import com.base.restdoc.Body;
 import com.base.restdoc.RestDoc;
-import com.base.sample.dto.request.InsertRequest;
-import com.base.sample.dto.request.UpdateRequest;
-import com.base.sample.dto.response.SampleResponse;
+import com.base.sample.request.InsertRequest;
+import com.base.sample.request.UpdateRequest;
+import com.base.sample.response.SampleResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.navercorp.fixturemonkey.FixtureMonkey;
 import com.navercorp.fixturemonkey.api.introspector.ConstructorPropertiesArbitraryIntrospector;
@@ -51,7 +51,7 @@ import org.springframework.test.web.servlet.MockMvc;
 public class SampleControllerTest {
 
     @MockBean
-    private SampleService service;
+    private SampleUseCase useCase;
 
     @Autowired
     private MockMvc mockMvc;
@@ -91,7 +91,7 @@ public class SampleControllerTest {
             InsertRequest insertRequest = fixtureMonkey.giveMeOne(InsertRequest.class);
 
             //when
-            doReturn(Boolean.TRUE).when(service).insert(any(InsertRequest.class));
+            doReturn(Boolean.TRUE).when(useCase).insert(any(InsertRequest.class));
 
             mockMvc.perform(post(url).header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
                     .contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(insertRequest)))
@@ -128,7 +128,7 @@ public class SampleControllerTest {
             UpdateRequest updateRequest = fixtureMonkey.giveMeOne(UpdateRequest.class);
 
             //when
-            doReturn(Boolean.TRUE).when(service).update(anyLong(), any(UpdateRequest.class));
+            doReturn(Boolean.TRUE).when(useCase).update(anyLong(), any(UpdateRequest.class));
 
             mockMvc.perform(
                     patch(url, id)
@@ -181,7 +181,7 @@ public class SampleControllerTest {
 
         List<SampleResponse> fixture = fixtureMonkey.giveMe(SampleResponse.class, 10);
 
-        doReturn(fixture).when(service).findAll();
+        doReturn(fixture).when(useCase).findAll();
 
         mockMvc.perform(
             get(URL)

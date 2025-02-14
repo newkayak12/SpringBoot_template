@@ -1,8 +1,8 @@
-package com.base.sample.dto.request;
+package com.base.sample.dto.in;
 
 import com.base.sample.entity.Sample;
 
-public record InsertRequest(
+public record InsertSample(
     String sampleName
 ) {
 
