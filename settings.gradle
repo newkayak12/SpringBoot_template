@@ -1,8 +1,8 @@
 rootProject.name = 'base'
 
-include 'presentation-layer'
-include 'business-layer'
-include 'persistence-layer'
-include 'utility-layer'
+include 'adapter-module'
+include 'application-module'
+include 'core-module'
+include 'utility-module'
 include 'auth-module'
 
