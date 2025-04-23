@@ -1,0 +1,18 @@
+
+spring:
+
+
+    application:
+      name: "base"
+    profiles:
+        active:
+            - temporary
+            - local
+            - stage
+            - production
+    config:
+        import:
+            - classpath:restApi/index.yaml
+            - classpath:persistence/hibernate.yaml
+            - classpath:persistence/datasource/index.yaml
+            - classpath:common.yaml

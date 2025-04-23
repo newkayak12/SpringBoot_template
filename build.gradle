@@ -55,28 +55,43 @@ tasks.named('test') {
 }
 
 
-project(':presentation-layer') {
+project(':adapter-module') {
     bootJar { enabled = false }
     jar { enabled = true }
     apply plugin: 'org.asciidoctor.jvm.convert'
     apply plugin: 'com.epages.restdocs-api-spec'
     apply plugin: 'org.hidetake.swagger.generator'
-}
 
-project(':business-layer') {
-    bootJar { enabled = false }
-    jar { enabled = true }
-}
-
-project(':persistence-layer') {
-    bootJar { enabled = false }
-    jar { enabled = true }
     ext {
         querydsl_version = "5.1.0"
     }
 }
 
-project(':utility-layer') {
+project(':application-module') {
+    bootJar { enabled = false }
+    jar { enabled = true }
+}
+
+project(':core-module') {
+    bootJar { enabled = false }
+    jar { enabled = true }
+
+    ext {
+        querydsl_version = "5.1.0"
+    }
+
+    dependencies {
+
+        compileOnly("com.querydsl:querydsl-jpa:${querydsl_version}:jakarta")
+        annotationProcessor "com.querydsl:querydsl-apt:${querydsl_version}:jakarta"
+        annotationProcessor "jakarta.annotation:jakarta.annotation-api"
+        annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+    }
+}
+
+
+
+project(':utility-module') {
     bootJar { enabled = false }
     jar { enabled = true }
 }

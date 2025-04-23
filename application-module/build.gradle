@@ -1,0 +1,11 @@
+dependencies {
+}
+
+dependencies {
+ implementation testImplementation(project(':utility-module'))
+ implementation testImplementation(project(':core-module'))
+}
+
+test {
+    useJUnitPlatform()
+}
