@@ -6,9 +6,6 @@ import org.springframework.util.StringUtils;
 public record PathParameter(String name, Boolean optional, String description) {
 
 
-    public PathParameter {
-    }
-
     public static PathParameter of(String name) {
         return new PathParameter(name, false, name);
     }

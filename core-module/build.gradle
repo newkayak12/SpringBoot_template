@@ -1,0 +1,10 @@
+
+dependencies {
+    implementation testImplementation(project(':utility-module',))
+
+}
+
+test {
+    useJUnitPlatform()
+}
+

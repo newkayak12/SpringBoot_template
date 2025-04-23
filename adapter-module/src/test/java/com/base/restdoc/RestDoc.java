@@ -23,7 +23,6 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import java.util.function.Function;
-import org.slf4j.LoggerFactory;
 import org.springframework.restdocs.headers.HeaderDescriptor;
 import org.springframework.restdocs.headers.RequestHeadersSnippet;
 import org.springframework.restdocs.headers.ResponseHeadersSnippet;
@@ -45,7 +44,6 @@ import org.springframework.util.StringUtils;
 
 public class RestDoc {
 
-    private static org.slf4j.Logger logger = LoggerFactory.getLogger(RestDoc.class);
     private final String identifier;
     private final RequestFieldsSnippet requestFieldsSnippet;
     private final PathParametersSnippet pathParametersSnippet;
@@ -54,7 +52,6 @@ public class RestDoc {
     private final RequestHeadersSnippet requestHeadersSnippet;
     private final ResponseFieldsSnippet responseFieldsSnippet;
     private final ResponseHeadersSnippet responseHeadersSnippet;
-    private ResponseBodySnippet responseBodySnippet;
     private final RequestPartsSnippet requestPartsSnippet;
     private final ResourceSnippetDetails tag;
 
@@ -133,14 +130,13 @@ public class RestDoc {
             this.tag.tag("api");
         }
 
-        RestDocumentationResultHandler handler = document(
+        return document(
             this.identifier,
             this.tag,
             preprocessRequest(prettyPrint()),
             preprocessResponse(prettyPrint()),
             snippets.toArray(Snippet[]::new)
         );
-        return handler;
     }
 
 
@@ -172,15 +168,16 @@ public class RestDoc {
             this.tag = this.tag.tags(tags);
             return this;
         }
+
         public RestDocBuilder summary(String summary) {
             this.tag = this.tag.summary(summary);
             return this;
         }
+
         public RestDocBuilder description(String description) {
             this.tag = this.tag.description(description);
             return this;
         }
-
 
 
         private Function<Header, HeaderDescriptor> mapHeader = header -> {
@@ -274,13 +271,8 @@ public class RestDoc {
             return this;
         }
 
-        //		public RestDocBuilder withRequestBody(Map<String, Object> attributes) {
-//			this.requestBodySnippet = requestBody(attributes);
-//			return this;
-//		}
 
         public RestDocBuilder withPathParameters(PathParameter... pathParameters) {
-//			this.pathParametersSnippet = relaxedPathParameters(toPathDescriptors(pathParameters));
             this.pathParametersSnippet = RequestDocumentation.pathParameters(toPathDescriptors(pathParameters));
             return this;
         }
@@ -299,13 +291,13 @@ public class RestDoc {
             this.responseFieldsSnippet = responseFields(this.toFieldDescriptors(body));
             return this;
         }
+
         public RestDocBuilder withResponseBody() {
             this.responseBodySnippet = responseBody();
             return this;
         }
 
         public RestDocBuilder withRequestPart(Part... part) {
-//			this.requestPartsSnippet = relaxedRequestParts(this.toPartDescriptor(part));
             this.requestPartsSnippet = requestParts(this.toPartDescriptor(part));
             return this;
         }

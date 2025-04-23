@@ -1,12 +1,15 @@
 package com.base.rest.sample.request;
 
-import com.base.sample.ports.in.update.UpdateSampleCommand.UpdateSampleCommandRequest;
+import com.base.sample.ports.in.UpdateSampleCommand.UpdateSampleCommandRequest;
 
 public record UpdateRequest(
-    String sampleName
+    String address,
+    String addressDetail,
+    String name,
+    int age
 ) {
 
     public UpdateSampleCommandRequest toUpdateCommand() {
-        return UpdateSampleCommandRequest.of(sampleName);
+        return new UpdateSampleCommandRequest(address, addressDetail, name, age);
     }
 }

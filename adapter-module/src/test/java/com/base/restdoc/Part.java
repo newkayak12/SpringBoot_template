@@ -4,8 +4,6 @@ import org.springframework.util.StringUtils;
 
 public record Part(String name, Boolean optional, String description) {
 
-    public Part {
-    }
 
     public static Part of(String name) {
         return new Part(name, false, name);

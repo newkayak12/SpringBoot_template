@@ -2,16 +2,13 @@ package com.base.restdoc;
 
 import org.springframework.util.StringUtils;
 
-public record Query (
+public record Query(
 
     String name,
     Boolean optional,
     String description
-){
+) {
 
-
-    public Query {
-    }
 
     public static Query of(String name) {
         return new Query(name, false, name);

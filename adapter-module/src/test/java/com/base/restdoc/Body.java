@@ -6,9 +6,6 @@ import org.springframework.util.StringUtils;
 public record Body(String name, JsonFieldType jsonType, Boolean optional, String description) {
 
 
-    public Body {
-    }
-
     public static Body of(String name, JsonFieldType jsonType) {
         return Body.of(name, jsonType, false);
     }
