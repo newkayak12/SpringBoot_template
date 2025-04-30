@@ -1,3 +1,0 @@
-spring:
-    activate:
-        on-profile: production

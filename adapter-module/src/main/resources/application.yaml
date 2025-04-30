@@ -1,9 +1,8 @@
-
 spring:
 
 
     application:
-      name: "base"
+        name: "base"
     profiles:
         active:
             - temporary
@@ -15,4 +14,8 @@ spring:
             - classpath:restApi/index.yaml
             - classpath:persistence/hibernate.yaml
             - classpath:persistence/datasource/index.yaml
+            - classpath:redis/datasource/index.yaml
+            - classpath:security/index.yaml
             - classpath:common.yaml
+
+

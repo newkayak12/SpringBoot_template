@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class FindAllQueryDslRepository implements FindAll {
+
     private final JPAQueryFactory query;
 
     @Override
@@ -30,19 +31,20 @@ public class FindAllQueryDslRepository implements FindAll {
     private JPAQuery<Long> count() {
         return query.select(sample.id.count()).from(sample);
     }
+
     private List<SampleQueryResult> list(Pageable pageable) {
-        JPAQuery<SampleQueryResult> select =  query.select(
+        JPAQuery<SampleQueryResult> select = query.select(
             Projections.constructor(
                 SampleQueryResult.class,
                 sample.id,
                 sample.basicAddress.address,
                 sample.basicAddress.detail,
-                sample.information.name,
-                sample.information.age
+                sample.personalInformation.name,
+                sample.personalInformation.age
             )
         );
 
-        if(pageable.isPaged()){
+        if (pageable.isPaged()) {
             select.limit(pageable.getPageSize()).offset(pageable.getOffset());
         }
 
