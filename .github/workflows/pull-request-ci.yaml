@@ -10,6 +10,7 @@ permissions:
     contents: read
 
 jobs:
+
     adapter-module-test:
         runs-on: ubuntu-latest
         steps:
@@ -22,6 +23,8 @@ jobs:
                     java-version: '17'
                     distribution: 'corretto'
                     cache: gradle
+
+
 
             -   name: Setup Gradle
                 uses: gradle/actions/setup-gradle@v3
@@ -36,8 +39,12 @@ jobs:
                     restore-keys: |
                         ${{ runner.os }}-gradle-
 
+            -   name: Grant execute permission to gradlew
+                run: chmod +x ./gradlew
+
             -   name: test pms-api with Gradle Wrapper
                 run: ./gradlew :adapter-module:test --parallel
+
     application-module-test:
         runs-on: ubuntu-latest
         steps:
@@ -63,6 +70,9 @@ jobs:
                     key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
                     restore-keys: |
                         ${{ runner.os }}-gradle-
+
+            -   name: Grant execute permission to gradlew
+                run: chmod +x ./gradlew
 
             -   name: test pms-api with Gradle Wrapper
                 run: ./gradlew :adapter-module:test --parallel
