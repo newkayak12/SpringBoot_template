@@ -41,8 +41,9 @@ jobs:
 
             -   name: Grant execute permission to gradlew
                 run: chmod +x ./gradlew
-
-            -   name: test pms-api with Gradle Wrapper
+            -   name: Set up Gradle wrapper
+                uses: gradle/wrapper-validation-action@v1
+            -   name: test adapter-module with Gradle Wrapper
                 run: ./gradlew :adapter-module:test --parallel
 
     application-module-test:
@@ -73,8 +74,9 @@ jobs:
 
             -   name: Grant execute permission to gradlew
                 run: chmod +x ./gradlew
-
-            -   name: test pms-api with Gradle Wrapper
+            -   name: Set up Gradle wrapper
+                uses: gradle/wrapper-validation-action@v1
+            -   name: test application-module with Gradle Wrapper
                 run: ./gradlew :adapter-module:test --parallel
 
 
