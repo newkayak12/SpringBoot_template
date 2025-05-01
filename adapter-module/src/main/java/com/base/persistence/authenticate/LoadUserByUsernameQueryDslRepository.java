@@ -2,8 +2,8 @@ package com.base.persistence.authenticate;
 
 import static com.base.authenticate.entity.QAuthenticate.authenticate;
 
-import com.base.authenticate.dto.AuthenticationDetails;
 import com.base.authenticate.port.out.LoadAuthenticate;
+import com.base.config.security.jwt.AuthenticationDetails;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import java.util.Optional;

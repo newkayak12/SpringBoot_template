@@ -1,4 +1,4 @@
-package com.base.restdoc;
+package com.base.config.restdoc;
 
 import org.springframework.restdocs.payload.JsonFieldType;
 import org.springframework.util.StringUtils;

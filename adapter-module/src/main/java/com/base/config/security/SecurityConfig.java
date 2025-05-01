@@ -9,6 +9,7 @@ import com.base.config.security.properties.xxs.Blacklist;
 import com.base.config.security.xss.CrossSiteScriptingFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchy;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -28,6 +29,7 @@ import password.encoder.PasswordEncodeUtility;
 
 @EnableWebSecurity
 @RequiredArgsConstructor
+@Profile(value = {"temporary", "local", "stage", "production"})
 public class SecurityConfig {
 
     private final Whitelist jwtPath;

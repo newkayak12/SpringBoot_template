@@ -1,5 +1,6 @@
 package com.base.config.security.jwt;
 
+import com.base.authenticate.dto.SecurityRole;
 import com.base.config.security.properties.jwt.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -22,6 +23,9 @@ public class JwtProvider implements AbstractJwtProvider<AuthenticationDetails> {
     private final SecretKey SIGNING_KEY;
     private final String ISSUER;
 
+    private final String ID = "id";
+    private final String ROLE = "role";
+
     public JwtProvider(JwtProperties properties) {
         this.PREFIX = "Bearer";
         this.SIGNING_KEY = Keys.hmacShaKeyFor(
@@ -40,8 +44,8 @@ public class JwtProvider implements AbstractJwtProvider<AuthenticationDetails> {
             .expiration(Date.from(now.plus(EXPIRE_TIME, ChronoUnit.MILLIS).atZone(ZoneId.systemDefault()).toInstant()))
             .claims(
                 Map.of(
-                    "role", tokenable.role(),
-                    "loginId", tokenable.getUsername()
+                    ID, tokenable.getUsername(),
+                    ROLE, tokenable.role()
                 )
             )
             .signWith(this.SIGNING_KEY)
@@ -76,9 +80,9 @@ public class JwtProvider implements AbstractJwtProvider<AuthenticationDetails> {
     public AuthenticationDetails decrypt(String bearerToken) {
         Claims claims = this.parse(bearerToken);
         String id = claims.getId();
-        String role = claims.get("role", String.class);
-        String loginId = claims.get("loginId", String.class);
+        String loginId = claims.get(ID, String.class);
+        SecurityRole role = claims.get(ROLE, SecurityRole.class);
 
-        return new AuthenticationDetails(id, role, loginId);
+        return new AuthenticationDetails(id, loginId, "", role);
     }
 }

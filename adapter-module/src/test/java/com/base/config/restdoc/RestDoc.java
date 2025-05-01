@@ -1,4 +1,4 @@
-package com.base.restdoc;
+package com.base.config.restdoc;
 
 import static com.epages.restdocs.apispec.MockMvcRestDocumentationWrapper.document;
 import static com.epages.restdocs.apispec.MockMvcRestDocumentationWrapper.resourceDetails;
