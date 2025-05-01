@@ -2,8 +2,8 @@ dependencies {
 }
 
 dependencies {
- implementation testImplementation(project(':utility-module'))
- implementation testImplementation(project(':core-module'))
+    implementation(project(':utility-module'))
+    implementation(project(':core-module'))
 }
 
 test {

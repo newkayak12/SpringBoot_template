@@ -28,8 +28,8 @@ dependencies {
 }
 
 dependencies {
-    implementation testImplementation(project(':utility-module'))
-    implementation testImplementation(project(":application-module"))
+    implementation(project(':utility-module'))
+    implementation(project(":application-module"))
     compileOnly(project(":core-module"))
 }
 
