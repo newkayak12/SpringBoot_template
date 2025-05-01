@@ -65,7 +65,6 @@ public class RestDoc {
         RequestHeadersSnippet requestHeadersSnippet,
         ResponseFieldsSnippet responseFieldsSnippet,
         ResponseHeadersSnippet responseHeadersSnippet,
-        ResponseBodySnippet responseBodySnippet,
         RequestPartsSnippet requestPartsSnippet,
         ResourceSnippetDetails tag
     ) {
@@ -77,7 +76,6 @@ public class RestDoc {
         this.requestHeadersSnippet = requestHeadersSnippet;
         this.responseFieldsSnippet = responseFieldsSnippet;
         this.responseHeadersSnippet = responseHeadersSnippet;
-        this.responseBodySnippet = responseBodySnippet;
         this.requestPartsSnippet = requestPartsSnippet;
         this.tag = tag;
     }
@@ -314,7 +312,6 @@ public class RestDoc {
                 this.requestHeadersSnippet,
                 this.responseFieldsSnippet,
                 this.responseHeadersSnippet,
-                this.responseBodySnippet,
                 this.requestPartsSnippet,
                 this.tag
             ).documentation();

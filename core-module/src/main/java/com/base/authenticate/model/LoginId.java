@@ -5,13 +5,13 @@ import jakarta.persistence.Embeddable;
 @Embeddable
 public class LoginId {
 
-    private final String id;
+    private final String userId;
 
     public LoginId() {
         this(null);
     }
 
-    public LoginId(String id) {
-        this.id = id;
+    public LoginId(String userId) {
+        this.userId = userId;
     }
 }

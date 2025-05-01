@@ -28,7 +28,7 @@ public class LoadUserByUsernameQueryDslRepository implements LoadAuthenticate {
                     )
                 )
                 .from(authenticate)
-                .where(authenticate.username.id.eq(username))
+                .where(authenticate.username.userId.eq(username))
                 .fetchOne()
         );
     }
