@@ -1,5 +1,6 @@
 package com.base.config.redis;
 
+import com.base.authenticate.dto.AuthenticationDetails;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;

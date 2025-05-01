@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.Map;
 import javax.crypto.SecretKey;
 
-public class JwtProvider implements AbstractJwtProvider<AuthenticationDetails> {
+public class JwtProvider implements AbstractJwtProvider<TokenableAuthenticationDetails> {
 
     private final String PREFIX;
     private final Long EXPIRE_TIME;
@@ -35,7 +35,7 @@ public class JwtProvider implements AbstractJwtProvider<AuthenticationDetails> {
     }
 
     @Override
-    public String tokenize(AuthenticationDetails tokenable) {
+    public String tokenize(TokenableAuthenticationDetails tokenable) {
         LocalDateTime now = LocalDateTime.now();
         String token = Jwts.builder()
             .id(tokenable.identity())
@@ -77,12 +77,12 @@ public class JwtProvider implements AbstractJwtProvider<AuthenticationDetails> {
     }
 
     @Override
-    public AuthenticationDetails decrypt(String bearerToken) {
+    public TokenableAuthenticationDetails decrypt(String bearerToken) {
         Claims claims = this.parse(bearerToken);
         String id = claims.getId();
         String loginId = claims.get(ID, String.class);
         SecurityRole role = claims.get(ROLE, SecurityRole.class);
 
-        return new AuthenticationDetails(id, loginId, "", role);
+        return new TokenableAuthenticationDetails(id, loginId, "", role);
     }
 }

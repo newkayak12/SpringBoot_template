@@ -54,6 +54,9 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+springBoot {
+    mainClass = 'com.base.BaseApplication'
+}
 
 project(':adapter-module') {
     bootJar { enabled = false }

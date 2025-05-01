@@ -27,9 +27,10 @@ public class JwtFilter extends OncePerRequestFilter {
         String bearerToken = request.getHeader(HttpHeaders.AUTHORIZATION);
 
         if (provider.validate(bearerToken)) {
-            AuthenticationDetails principal = provider.decrypt(bearerToken);
-            Authentication authentication = new UsernamePasswordAuthenticationToken(principal, bearerToken,
-                principal.getAuthorities());
+            TokenableAuthenticationDetails principal = provider.decrypt(bearerToken);
+            Authentication authentication = new UsernamePasswordAuthenticationToken(
+                principal, bearerToken, principal.getAuthorities()
+            );
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 
