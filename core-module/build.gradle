@@ -1,6 +1,5 @@
-
 dependencies {
-    implementation testImplementation(project(':utility-module',))
+    implementation(project(':utility-module',))
 
 }
 

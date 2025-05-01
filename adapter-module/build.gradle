@@ -6,30 +6,30 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation("io.jsonwebtoken:jjwt:0.12.6")
 }
-
 dependencies {
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
     testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
     asciidoctorExt("org.springframework.restdocs:spring-restdocs-asciidoctor")
     testImplementation("com.epages:restdocs-api-spec-mockmvc:0.19.4")
+    testImplementation 'org.springframework.security:spring-security-test'
 }
-
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation "com.querydsl:querydsl-jpa:${querydsl_version}:jakarta"
     implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.10.0'
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
     runtimeOnly 'com.h2database:h2'
+    implementation(group: 'it.ozimov', name: 'embedded-redis', version: '0.7.2')
+    implementation('org.springframework.boot:spring-boot-starter-data-redis')
 }
-
 dependencies {
-    implementation testImplementation(project(':utility-module'))
-    implementation testImplementation(project(":application-module"))
-    implementation testImplementation(project(":auth-module"))
-    compileOnly (project(":core-module"))
+    implementation(project(':utility-module'))
+    implementation(project(":application-module"))
+    compileOnly(project(":core-module"))
 }
-
 
 
 test {
@@ -68,7 +68,7 @@ tasks.register('swagger') {
     doFirst {
         def swaggerUIFile = file("${openapi3.outputDirectory}/openapi3.yaml")
 
-        def securitySchemesContent =  "  securitySchemes:\n" +
+        def securitySchemesContent = "  securitySchemes:\n" +
             "    APIKey:\n" +
             "      type: apiKey\n" +
             "      name: Authorization\n" +
@@ -95,7 +95,7 @@ tasks.withType(JavaCompile) {
     options.getGeneratedSourceOutputDirectory().set(file(generated))
     options.compilerArgs.add("-Aquerydsl.generatedAnnotationClass=javax.annotation.Generated")
 }
-sourceSets { main.java.srcDirs += [ generated ] }
+sourceSets { main.java.srcDirs += [generated] }
 clean { delete file(generated) }
 
 

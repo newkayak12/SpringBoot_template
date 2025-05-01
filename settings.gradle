@@ -4,5 +4,4 @@ include 'adapter-module'
 include 'application-module'
 include 'core-module'
 include 'utility-module'
-include 'auth-module'
 

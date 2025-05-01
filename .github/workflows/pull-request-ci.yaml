@@ -2,6 +2,7 @@ name: Pull Request CI
 on:
     pull_request:
         branches:
+            - master
             - main
 
 permissions:
@@ -22,6 +23,8 @@ jobs:
                     distribution: 'corretto'
                     cache: gradle
 
+
+
             -   name: Setup Gradle
                 uses: gradle/actions/setup-gradle@v3
 
@@ -35,36 +38,41 @@ jobs:
                     restore-keys: |
                         ${{ runner.os }}-gradle-
 
-            -   name: test pms-api with Gradle Wrapper
+            -   name: Grant execute permission to gradlew
+                run: chmod +x ./gradlew
+            -   name: test adapter-module with Gradle Wrapper
                 run: ./gradlew :adapter-module:test --parallel
-        application-module-test:
-            runs-on: ubuntu-latest
-            steps:
-                -   name: Checkout
-                    uses: actions/checkout@v4
+    application-module-test:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v4
 
-                -   name: Set up JDK 17
-                    uses: actions/setup-java@v4
-                    with:
-                        java-version: '17'
-                        distribution: 'corretto'
-                        cache: gradle
+            -   name: Set up JDK 21
+                uses: actions/setup-java@v4
+                with:
+                    java-version: '21'
+                    distribution: 'corretto'
+                    cache: gradle
 
-                -   name: Setup Gradle
-                    uses: gradle/actions/setup-gradle@v3
+            -   name: Setup Gradle
+                uses: gradle/actions/setup-gradle@v3
 
-                -   name: Gradle Caching
-                    uses: actions/cache@v3
-                    with:
-                        path: |
-                            ~/.gradle/caches
-                            ~/.gradle/wrapper
-                        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-                        restore-keys: |
-                            ${{ runner.os }}-gradle-
+            -   name: Gradle Caching
+                uses: actions/cache@v3
+                with:
+                    path: |
+                        ~/.gradle/caches
+                        ~/.gradle/wrapper
+                    key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+                    restore-keys: |
+                        ${{ runner.os }}-gradle-
 
-                -   name: test pms-api with Gradle Wrapper
-                    run: ./gradlew :adapter-module:test --parallel
+            -   name: Grant execute permission to gradlew
+                run: chmod +x ./gradlew
+
+            -   name: test application-module with Gradle Wrapper
+                run: ./gradlew :adapter-module:test --parallel
 
 
     build:
@@ -76,10 +84,10 @@ jobs:
             -   name: Checkout
                 uses: actions/checkout@v4
 
-            -   name: Set up JDK 17
+            -   name: Set up JDK 21
                 uses: actions/setup-java@v4
                 with:
-                    java-version: '17'
+                    java-version: '21'
                     distribution: 'corretto'
                     cache: gradle
 

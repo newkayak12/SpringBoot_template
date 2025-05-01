@@ -54,6 +54,9 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+springBoot {
+    mainClass = 'com.base.BaseApplication'
+}
 
 project(':adapter-module') {
     bootJar { enabled = false }
@@ -70,6 +73,9 @@ project(':adapter-module') {
 project(':application-module') {
     bootJar { enabled = false }
     jar { enabled = true }
+    dependencies {
+        implementation("org.springframework.security:spring-security-core:6.3.5")
+    }
 }
 
 project(':core-module') {
@@ -89,9 +95,10 @@ project(':core-module') {
     }
 }
 
-
-
 project(':utility-module') {
     bootJar { enabled = false }
     jar { enabled = true }
+    dependencies {
+        implementation("org.springframework.security:spring-security-crypto")
+    }
 }
