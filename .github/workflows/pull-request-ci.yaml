@@ -10,7 +10,6 @@ permissions:
     contents: read
 
 jobs:
-
     adapter-module-test:
         runs-on: ubuntu-latest
         steps:
@@ -41,11 +40,8 @@ jobs:
 
             -   name: Grant execute permission to gradlew
                 run: chmod +x ./gradlew
-            -   name: Set up Gradle wrapper
-                uses: gradle/wrapper-validation-action@v1
             -   name: test adapter-module with Gradle Wrapper
                 run: ./gradlew :adapter-module:test --parallel
-
     application-module-test:
         runs-on: ubuntu-latest
         steps:
@@ -74,8 +70,7 @@ jobs:
 
             -   name: Grant execute permission to gradlew
                 run: chmod +x ./gradlew
-            -   name: Set up Gradle wrapper
-                uses: gradle/wrapper-validation-action@v1
+
             -   name: test application-module with Gradle Wrapper
                 run: ./gradlew :adapter-module:test --parallel
 
