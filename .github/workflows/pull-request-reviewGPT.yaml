@@ -7,7 +7,7 @@ on:
 permissions:
     pull-requests: write
     contents: read
-    
+
 jobs:
     review:
         runs-on: ubuntu-latest
@@ -17,6 +17,7 @@ jobs:
 
             -   name: ChatGPT Code Review
                 uses: anc95/ChatGPT-CodeReview@main
+                prompt: ${{OPENAI_PROMPT}}
                 env:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
