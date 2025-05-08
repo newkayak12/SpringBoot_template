@@ -22,6 +22,6 @@ jobs:
                     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
                     LANGUAGE: Korean
                     PROMPT: ${{secrets.OPENAI_PROMPT}}
-                    MODEL: o4-mini
+                    MODEL: gpt-4o-mini
                     TEMPERATURE: 0.7
                     MAX_TOKENS: 2048
