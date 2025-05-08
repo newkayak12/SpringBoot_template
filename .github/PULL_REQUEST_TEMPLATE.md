@@ -1,7 +1,7 @@
 ## 🎫 Context
 
 - github:
-- jira
+- jira:
 
 ## 📄 Summary
 
